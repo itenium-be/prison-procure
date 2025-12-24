@@ -75,16 +75,58 @@
     }
   },
   "suppliers": {
-    "title": "Suppliers",
-    "description": "Manage suppliers and contact information",
-    "addSupplier": "Add supplier",
-    "columns": {
+    "addNew": "Add supplier",
+    "newSupplier": "New supplier",
+    "editSupplier": "Edit supplier",
+    "status": "Status",
+    "actions": "Actions",
+    "blocked": "Blocked",
+    "activeLocal": "Active",
+    "inactiveLocal": "Inactive",
+    "block": "Block supplier",
+    "unblock": "Unblock supplier",
+    "activateLocal": "Activate for this prison",
+    "deactivateLocal": "Deactivate for this prison",
+    "tabs": {
+      "general": "General",
+      "financial": "Financial",
+      "logistics": "Logistics"
+    },
+    "fields": {
       "code": "Code",
+      "codePlaceholder": "e.g. SUP001",
       "name": "Name",
-      "telephone": "Telephone",
+      "namePlaceholder": "Company name",
+      "address": "Address",
+      "addressPlaceholder": "Street, city, postal code",
+      "phone": "Phone",
+      "phonePlaceholder": "+32 ...",
       "email": "Email",
+      "emailPlaceholder": "info@company.be",
       "language": "Language",
-      "published": "Published"
+      "blocked": "Blocked",
+      "blockedYes": "Blocked",
+      "blockedNo": "Active",
+      "vatNumber": "VAT number",
+      "vatNumberPlaceholder": "BE0123456789",
+      "iban": "IBAN",
+      "ibanPlaceholder": "BE00 0000 0000 0000",
+      "bic": "BIC",
+      "bicPlaceholder": "GEBABEBB",
+      "paymentTerms": "Payment terms",
+      "paymentTermsImmediate": "Immediate",
+      "days": "days",
+      "currency": "Currency",
+      "contactPerson": "Contact person",
+      "contactPersonPlaceholder": "Full name",
+      "contactPhone": "Phone",
+      "contactPhonePlaceholder": "+32 ...",
+      "contactEmail": "Email",
+      "contactEmailPlaceholder": "contact@company.be",
+      "openingHours": "Opening hours",
+      "openingHoursPlaceholder": "e.g. Mon-Fri 8:00-17:00",
+      "closingDays": "Closing days",
+      "closingDaysPlaceholder": "e.g. Weekends, public holidays"
     }
   },
   "articles": {
@@ -135,6 +177,12 @@
       "kg": "kg"
     }
   },
+  "languages": {
+    "nl": "Dutch",
+    "fr": "French",
+    "de": "German",
+    "en": "English"
+  },
   "common": {
     "loading": "Loading...",
     "error": "An error occurred",
@@ -148,6 +196,7 @@
     "export": "Export",
     "import": "Import",
     "yes": "Yes",
-    "no": "No"
+    "no": "No",
+    "back": "Back"
   }
 }

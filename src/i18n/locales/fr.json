@@ -75,16 +75,58 @@
     }
   },
   "suppliers": {
-    "title": "Fournisseurs",
-    "description": "Gérer les fournisseurs et les coordonnées",
-    "addSupplier": "Ajouter fournisseur",
-    "columns": {
+    "addNew": "Ajouter un fournisseur",
+    "newSupplier": "Nouveau fournisseur",
+    "editSupplier": "Modifier le fournisseur",
+    "status": "Statut",
+    "actions": "Actions",
+    "blocked": "Bloqué",
+    "activeLocal": "Actif",
+    "inactiveLocal": "Inactif",
+    "block": "Bloquer le fournisseur",
+    "unblock": "Débloquer le fournisseur",
+    "activateLocal": "Activer pour cette prison",
+    "deactivateLocal": "Désactiver pour cette prison",
+    "tabs": {
+      "general": "Général",
+      "financial": "Financier",
+      "logistics": "Logistique"
+    },
+    "fields": {
       "code": "Code",
+      "codePlaceholder": "ex. SUP001",
       "name": "Nom",
-      "telephone": "Téléphone",
+      "namePlaceholder": "Nom de l'entreprise",
+      "address": "Adresse",
+      "addressPlaceholder": "Rue, ville, code postal",
+      "phone": "Téléphone",
+      "phonePlaceholder": "+32 ...",
       "email": "E-mail",
+      "emailPlaceholder": "info@entreprise.be",
       "language": "Langue",
-      "published": "Publié"
+      "blocked": "Bloqué",
+      "blockedYes": "Bloqué",
+      "blockedNo": "Actif",
+      "vatNumber": "Numéro de TVA",
+      "vatNumberPlaceholder": "BE0123456789",
+      "iban": "IBAN",
+      "ibanPlaceholder": "BE00 0000 0000 0000",
+      "bic": "BIC",
+      "bicPlaceholder": "GEBABEBB",
+      "paymentTerms": "Conditions de paiement",
+      "paymentTermsImmediate": "Immédiat",
+      "days": "jours",
+      "currency": "Devise",
+      "contactPerson": "Personne de contact",
+      "contactPersonPlaceholder": "Nom complet",
+      "contactPhone": "Téléphone",
+      "contactPhonePlaceholder": "+32 ...",
+      "contactEmail": "E-mail",
+      "contactEmailPlaceholder": "contact@entreprise.be",
+      "openingHours": "Heures d'ouverture",
+      "openingHoursPlaceholder": "ex. Lun-Ven 8:00-17:00",
+      "closingDays": "Jours de fermeture",
+      "closingDaysPlaceholder": "ex. Week-ends, jours fériés"
     }
   },
   "articles": {
@@ -135,6 +177,12 @@
       "kg": "kg"
     }
   },
+  "languages": {
+    "nl": "Néerlandais",
+    "fr": "Français",
+    "de": "Allemand",
+    "en": "Anglais"
+  },
   "common": {
     "loading": "Chargement...",
     "error": "Une erreur s'est produite",
@@ -148,6 +196,7 @@
     "export": "Exporter",
     "import": "Importer",
     "yes": "Oui",
-    "no": "Non"
+    "no": "Non",
+    "back": "Retour"
   }
 }

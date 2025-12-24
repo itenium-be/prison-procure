@@ -75,16 +75,58 @@
     }
   },
   "suppliers": {
-    "title": "Leveranciers",
-    "description": "Beheer leveranciers en contactgegevens",
-    "addSupplier": "Leverancier toevoegen",
-    "columns": {
+    "addNew": "Leverancier toevoegen",
+    "newSupplier": "Nieuwe leverancier",
+    "editSupplier": "Leverancier bewerken",
+    "status": "Status",
+    "actions": "Acties",
+    "blocked": "Geblokkeerd",
+    "activeLocal": "Actief",
+    "inactiveLocal": "Inactief",
+    "block": "Leverancier blokkeren",
+    "unblock": "Leverancier deblokkeren",
+    "activateLocal": "Activeren voor deze gevangenis",
+    "deactivateLocal": "Deactiveren voor deze gevangenis",
+    "tabs": {
+      "general": "Algemeen",
+      "financial": "Financieel",
+      "logistics": "Logistiek"
+    },
+    "fields": {
       "code": "Code",
+      "codePlaceholder": "bv. SUP001",
       "name": "Naam",
-      "telephone": "Telefoonnummer",
+      "namePlaceholder": "Bedrijfsnaam",
+      "address": "Adres",
+      "addressPlaceholder": "Straat, stad, postcode",
+      "phone": "Telefoon",
+      "phonePlaceholder": "+32 ...",
       "email": "E-mail",
+      "emailPlaceholder": "info@bedrijf.be",
       "language": "Taal",
-      "published": "Gepubliceerd"
+      "blocked": "Geblokkeerd",
+      "blockedYes": "Geblokkeerd",
+      "blockedNo": "Actief",
+      "vatNumber": "BTW-nummer",
+      "vatNumberPlaceholder": "BE0123456789",
+      "iban": "IBAN",
+      "ibanPlaceholder": "BE00 0000 0000 0000",
+      "bic": "BIC",
+      "bicPlaceholder": "GEBABEBB",
+      "paymentTerms": "Betalingstermijn",
+      "paymentTermsImmediate": "Onmiddellijk",
+      "days": "dagen",
+      "currency": "Valuta",
+      "contactPerson": "Contactpersoon",
+      "contactPersonPlaceholder": "Volledige naam",
+      "contactPhone": "Telefoon",
+      "contactPhonePlaceholder": "+32 ...",
+      "contactEmail": "E-mail",
+      "contactEmailPlaceholder": "contact@bedrijf.be",
+      "openingHours": "Openingsuren",
+      "openingHoursPlaceholder": "bv. Ma-Vr 8:00-17:00",
+      "closingDays": "Sluitingsdagen",
+      "closingDaysPlaceholder": "bv. Weekends, feestdagen"
     }
   },
   "articles": {
@@ -135,6 +177,12 @@
       "kg": "kg"
     }
   },
+  "languages": {
+    "nl": "Nederlands",
+    "fr": "Frans",
+    "de": "Duits",
+    "en": "Engels"
+  },
   "common": {
     "loading": "Laden...",
     "error": "Er is een fout opgetreden",
@@ -148,6 +196,7 @@
     "export": "Exporteren",
     "import": "Importeren",
     "yes": "Ja",
-    "no": "Nee"
+    "no": "Nee",
+    "back": "Terug"
   }
 }

@@ -2,7 +2,7 @@ import { Routes, Route } from 'react-router-dom'
 import { PrisonProvider } from './context/PrisonContext'
 import { Layout } from './components/Layout'
 import { Dashboard } from './pages/Dashboard'
-import { Suppliers } from './pages/Suppliers'
+import { Suppliers, SupplierDetail } from './pages/Suppliers'
 import { Articles } from './pages/Articles'
 import { Procurement } from './pages/Procurement'
 import { Stock } from './pages/Stock'
@@ -15,6 +15,7 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Dashboard />} />
           <Route path="suppliers" element={<Suppliers />} />
+          <Route path="suppliers/:id" element={<SupplierDetail />} />
           <Route path="articles" element={<Articles />} />
           <Route path="procurement" element={<Procurement />} />
           <Route path="stock" element={<Stock />} />
