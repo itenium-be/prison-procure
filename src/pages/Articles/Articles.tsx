@@ -22,8 +22,13 @@ export function Articles() {
       key: 'code',
       header: t('articles.columns.code'),
       sortable: true,
-      render: (value) => (
-        <span className={styles.codeCell}>{String(value)}</span>
+      render: (value, row) => (
+        <button
+          className={styles.codeLink}
+          onClick={() => handleEdit(String(row.id))}
+        >
+          {String(value)}
+        </button>
       ),
     },
     {
