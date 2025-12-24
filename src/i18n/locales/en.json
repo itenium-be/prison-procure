@@ -74,6 +74,19 @@
       "description": "System settings and user management"
     }
   },
+  "suppliers": {
+    "title": "Suppliers",
+    "description": "Manage suppliers and contact information",
+    "addSupplier": "Add supplier",
+    "columns": {
+      "code": "Code",
+      "name": "Name",
+      "telephone": "Telephone",
+      "email": "Email",
+      "language": "Language",
+      "published": "Published"
+    }
+  },
   "common": {
     "loading": "Loading...",
     "error": "An error occurred",
@@ -85,6 +98,8 @@
     "search": "Search",
     "filter": "Filter",
     "export": "Export",
-    "import": "Import"
+    "import": "Import",
+    "yes": "Yes",
+    "no": "No"
   }
 }

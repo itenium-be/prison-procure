@@ -74,6 +74,19 @@
       "description": "Systemeinstellungen und Benutzerverwaltung"
     }
   },
+  "suppliers": {
+    "title": "Lieferanten",
+    "description": "Lieferanten und Kontaktdaten verwalten",
+    "addSupplier": "Lieferant hinzufügen",
+    "columns": {
+      "code": "Code",
+      "name": "Name",
+      "telephone": "Telefonnummer",
+      "email": "E-Mail",
+      "language": "Sprache",
+      "published": "Veröffentlicht"
+    }
+  },
   "common": {
     "loading": "Laden...",
     "error": "Ein Fehler ist aufgetreten",
@@ -85,6 +98,8 @@
     "search": "Suchen",
     "filter": "Filtern",
     "export": "Exportieren",
-    "import": "Importieren"
+    "import": "Importieren",
+    "yes": "Ja",
+    "no": "Nein"
   }
 }

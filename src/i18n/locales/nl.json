@@ -74,6 +74,19 @@
       "description": "Systeeminstellingen en gebruikersbeheer"
     }
   },
+  "suppliers": {
+    "title": "Leveranciers",
+    "description": "Beheer leveranciers en contactgegevens",
+    "addSupplier": "Leverancier toevoegen",
+    "columns": {
+      "code": "Code",
+      "name": "Naam",
+      "telephone": "Telefoonnummer",
+      "email": "E-mail",
+      "language": "Taal",
+      "published": "Gepubliceerd"
+    }
+  },
   "common": {
     "loading": "Laden...",
     "error": "Er is een fout opgetreden",
@@ -85,6 +98,8 @@
     "search": "Zoeken",
     "filter": "Filter",
     "export": "Exporteren",
-    "import": "Importeren"
+    "import": "Importeren",
+    "yes": "Ja",
+    "no": "Nee"
   }
 }

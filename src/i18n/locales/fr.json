@@ -74,6 +74,19 @@
       "description": "Paramètres système et gestion des utilisateurs"
     }
   },
+  "suppliers": {
+    "title": "Fournisseurs",
+    "description": "Gérer les fournisseurs et les coordonnées",
+    "addSupplier": "Ajouter fournisseur",
+    "columns": {
+      "code": "Code",
+      "name": "Nom",
+      "telephone": "Téléphone",
+      "email": "E-mail",
+      "language": "Langue",
+      "published": "Publié"
+    }
+  },
   "common": {
     "loading": "Chargement...",
     "error": "Une erreur s'est produite",
@@ -85,6 +98,8 @@
     "search": "Rechercher",
     "filter": "Filtrer",
     "export": "Exporter",
-    "import": "Importer"
+    "import": "Importer",
+    "yes": "Oui",
+    "no": "Non"
   }
 }
