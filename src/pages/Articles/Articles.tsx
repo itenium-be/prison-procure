@@ -1,11 +1,21 @@
 import { useTranslation } from 'react-i18next'
-import { Plus } from 'lucide-react'
+import { useNavigate } from 'react-router-dom'
+import { Plus, Pencil } from 'lucide-react'
 import { DataTable, Column } from '../../components/DataTable'
 import { DUMMY_ARTICLES, Article } from '../../data/articles'
 import styles from './Articles.module.css'
 
 export function Articles() {
   const { t } = useTranslation()
+  const navigate = useNavigate()
+
+  const handleEdit = (id: string) => {
+    navigate(`/articles/${id}`)
+  }
+
+  const handleAddNew = () => {
+    navigate('/articles/new')
+  }
 
   const columns: Column<Article>[] = [
     {
@@ -94,6 +104,19 @@ export function Articles() {
         </span>
       ),
     },
+    {
+      key: 'id',
+      header: t('articles.columns.actions'),
+      render: (_, row) => (
+        <button
+          className={styles.editButton}
+          onClick={() => handleEdit(String(row.id))}
+          title={t('common.edit')}
+        >
+          <Pencil size={16} />
+        </button>
+      ),
+    },
   ]
 
   return (
@@ -103,7 +126,7 @@ export function Articles() {
           <h1>{t('articles.title')}</h1>
           <p>{t('articles.description')}</p>
         </div>
-        <button className={styles.addButton}>
+        <button className={styles.addButton} onClick={handleAddNew}>
           <Plus size={20} />
           {t('articles.addArticle')}
         </button>
@@ -111,7 +134,7 @@ export function Articles() {
 
       <DataTable
         data={DUMMY_ARTICLES as unknown as Record<string, unknown>[]}
-        columns={columns as Column<Record<string, unknown>>[]}
+        columns={columns as unknown as Column<Record<string, unknown>>[]}
         keyField="id"
       />
     </div>
