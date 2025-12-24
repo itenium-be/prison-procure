@@ -1,0 +1,107 @@
+.header {
+  height: 64px;
+  background-color: var(--header-bg);
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+}
+
+.pageTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.selector {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background-color: var(--background-color);
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+.selectorIcon {
+  color: var(--text-secondary);
+}
+
+.select {
+  border: none;
+  background: none;
+  font-size: 0.875rem;
+  color: var(--text-primary);
+  cursor: pointer;
+  min-width: 180px;
+}
+
+.select:focus {
+  outline: none;
+}
+
+.languageSelector {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background-color: var(--background-color);
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+.languageButtons {
+  display: flex;
+  gap: 4px;
+}
+
+.langButton {
+  padding: 4px 8px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.langButton:hover {
+  background-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+.langButton.activeLang {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.userMenu {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: var(--secondary-color);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}

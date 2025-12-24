@@ -1,0 +1,90 @@
+{
+  "nav": {
+    "dashboard": "Dashboard",
+    "suppliers": "Leveranciers",
+    "articles": "Artikelen",
+    "procurement": "Inkoopbeheer",
+    "stock": "Voorraad",
+    "admin": "Beheer"
+  },
+  "header": {
+    "selectPrison": "Selecteer gevangenis",
+    "selectLanguage": "Taal"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "welcome": "Welkom bij het Inkoop Management Systeem",
+    "subtitle": "Beheer bestellingen en voorraad voor Belgische gevangenissen",
+    "stats": {
+      "pendingOrders": "Openstaande bestellingen",
+      "suppliers": "Actieve leveranciers",
+      "articles": "Artikelen in catalogus",
+      "lowStock": "Lage voorraad items"
+    },
+    "recentOrders": "Recente bestellingen",
+    "quickActions": "Snelle acties",
+    "newOrder": "Nieuwe bestelling",
+    "viewStock": "Bekijk voorraad",
+    "manageSuppliers": "Beheer leveranciers"
+  },
+  "prisons": {
+    "antwerpen": "Gevangenis Antwerpen",
+    "brugge": "Gevangenis Brugge",
+    "gent": "Gevangenis Gent",
+    "leuven": "Gevangenis Leuven Centraal",
+    "mechelen": "Gevangenis Mechelen",
+    "hasselt": "Gevangenis Hasselt",
+    "tongeren": "Gevangenis Tongeren",
+    "turnhout": "Gevangenis Turnhout",
+    "dendermonde": "Gevangenis Dendermonde",
+    "oudenaarde": "Gevangenis Oudenaarde",
+    "ieper": "Gevangenis Ieper",
+    "berkendael": "Gevangenis Berkendael",
+    "vorst": "Gevangenis Vorst",
+    "sintgillis": "Gevangenis Sint-Gillis",
+    "lantin": "Gevangenis Lantin",
+    "marche": "Gevangenis Marche-en-Famenne",
+    "namur": "Gevangenis Namen",
+    "mons": "Gevangenis Bergen",
+    "jamioulx": "Gevangenis Jamioulx",
+    "arlon": "Gevangenis Aarlen",
+    "dinant": "Gevangenis Dinant",
+    "verviers": "Gevangenis Verviers",
+    "haren": "Gevangenis Haren"
+  },
+  "pages": {
+    "suppliers": {
+      "title": "Leveranciers",
+      "description": "Beheer leveranciers en contactgegevens"
+    },
+    "articles": {
+      "title": "Artikelen",
+      "description": "Beheer artikelcatalogus en prijzen"
+    },
+    "procurement": {
+      "title": "Inkoopbeheer",
+      "description": "Beheer bestellingen en inkooporders"
+    },
+    "stock": {
+      "title": "Voorraad",
+      "description": "Beheer voorraadniveaus en bewegingen"
+    },
+    "admin": {
+      "title": "Beheer",
+      "description": "Systeeminstellingen en gebruikersbeheer"
+    }
+  },
+  "common": {
+    "loading": "Laden...",
+    "error": "Er is een fout opgetreden",
+    "save": "Opslaan",
+    "cancel": "Annuleren",
+    "delete": "Verwijderen",
+    "edit": "Bewerken",
+    "add": "Toevoegen",
+    "search": "Zoeken",
+    "filter": "Filter",
+    "export": "Exporteren",
+    "import": "Importeren"
+  }
+}

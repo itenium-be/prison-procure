@@ -1,0 +1,90 @@
+{
+  "nav": {
+    "dashboard": "Tableau de bord",
+    "suppliers": "Fournisseurs",
+    "articles": "Articles",
+    "procurement": "Gestion des achats",
+    "stock": "Stock",
+    "admin": "Administration"
+  },
+  "header": {
+    "selectPrison": "Sélectionner la prison",
+    "selectLanguage": "Langue"
+  },
+  "dashboard": {
+    "title": "Tableau de bord",
+    "welcome": "Bienvenue dans le Système de Gestion des Achats",
+    "subtitle": "Gérer les commandes et les stocks pour les prisons belges",
+    "stats": {
+      "pendingOrders": "Commandes en attente",
+      "suppliers": "Fournisseurs actifs",
+      "articles": "Articles au catalogue",
+      "lowStock": "Articles en rupture"
+    },
+    "recentOrders": "Commandes récentes",
+    "quickActions": "Actions rapides",
+    "newOrder": "Nouvelle commande",
+    "viewStock": "Voir le stock",
+    "manageSuppliers": "Gérer les fournisseurs"
+  },
+  "prisons": {
+    "antwerpen": "Prison d'Anvers",
+    "brugge": "Prison de Bruges",
+    "gent": "Prison de Gand",
+    "leuven": "Prison de Louvain Central",
+    "mechelen": "Prison de Malines",
+    "hasselt": "Prison de Hasselt",
+    "tongeren": "Prison de Tongres",
+    "turnhout": "Prison de Turnhout",
+    "dendermonde": "Prison de Termonde",
+    "oudenaarde": "Prison d'Audenarde",
+    "ieper": "Prison d'Ypres",
+    "berkendael": "Prison de Berkendael",
+    "vorst": "Prison de Forest",
+    "sintgillis": "Prison de Saint-Gilles",
+    "lantin": "Prison de Lantin",
+    "marche": "Prison de Marche-en-Famenne",
+    "namur": "Prison de Namur",
+    "mons": "Prison de Mons",
+    "jamioulx": "Prison de Jamioulx",
+    "arlon": "Prison d'Arlon",
+    "dinant": "Prison de Dinant",
+    "verviers": "Prison de Verviers",
+    "haren": "Prison de Haren"
+  },
+  "pages": {
+    "suppliers": {
+      "title": "Fournisseurs",
+      "description": "Gérer les fournisseurs et les coordonnées"
+    },
+    "articles": {
+      "title": "Articles",
+      "description": "Gérer le catalogue et les prix"
+    },
+    "procurement": {
+      "title": "Gestion des achats",
+      "description": "Gérer les commandes et les bons d'achat"
+    },
+    "stock": {
+      "title": "Stock",
+      "description": "Gérer les niveaux de stock et les mouvements"
+    },
+    "admin": {
+      "title": "Administration",
+      "description": "Paramètres système et gestion des utilisateurs"
+    }
+  },
+  "common": {
+    "loading": "Chargement...",
+    "error": "Une erreur s'est produite",
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "delete": "Supprimer",
+    "edit": "Modifier",
+    "add": "Ajouter",
+    "search": "Rechercher",
+    "filter": "Filtrer",
+    "export": "Exporter",
+    "import": "Importer"
+  }
+}

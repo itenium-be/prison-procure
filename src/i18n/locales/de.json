@@ -1,0 +1,90 @@
+{
+  "nav": {
+    "dashboard": "Dashboard",
+    "suppliers": "Lieferanten",
+    "articles": "Artikel",
+    "procurement": "Einkaufsverwaltung",
+    "stock": "Lagerbestand",
+    "admin": "Verwaltung"
+  },
+  "header": {
+    "selectPrison": "Gefängnis auswählen",
+    "selectLanguage": "Sprache"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "welcome": "Willkommen im Einkaufs-Management-System",
+    "subtitle": "Bestellungen und Lagerbestand für belgische Gefängnisse verwalten",
+    "stats": {
+      "pendingOrders": "Offene Bestellungen",
+      "suppliers": "Aktive Lieferanten",
+      "articles": "Artikel im Katalog",
+      "lowStock": "Niedriger Lagerbestand"
+    },
+    "recentOrders": "Letzte Bestellungen",
+    "quickActions": "Schnellaktionen",
+    "newOrder": "Neue Bestellung",
+    "viewStock": "Lagerbestand anzeigen",
+    "manageSuppliers": "Lieferanten verwalten"
+  },
+  "prisons": {
+    "antwerpen": "Gefängnis Antwerpen",
+    "brugge": "Gefängnis Brügge",
+    "gent": "Gefängnis Gent",
+    "leuven": "Gefängnis Löwen Zentral",
+    "mechelen": "Gefängnis Mecheln",
+    "hasselt": "Gefängnis Hasselt",
+    "tongeren": "Gefängnis Tongeren",
+    "turnhout": "Gefängnis Turnhout",
+    "dendermonde": "Gefängnis Dendermonde",
+    "oudenaarde": "Gefängnis Oudenaarde",
+    "ieper": "Gefängnis Ypern",
+    "berkendael": "Gefängnis Berkendael",
+    "vorst": "Gefängnis Forest",
+    "sintgillis": "Gefängnis Sint-Gillis",
+    "lantin": "Gefängnis Lantin",
+    "marche": "Gefängnis Marche-en-Famenne",
+    "namur": "Gefängnis Namur",
+    "mons": "Gefängnis Mons",
+    "jamioulx": "Gefängnis Jamioulx",
+    "arlon": "Gefängnis Arlon",
+    "dinant": "Gefängnis Dinant",
+    "verviers": "Gefängnis Verviers",
+    "haren": "Gefängnis Haren"
+  },
+  "pages": {
+    "suppliers": {
+      "title": "Lieferanten",
+      "description": "Lieferanten und Kontaktdaten verwalten"
+    },
+    "articles": {
+      "title": "Artikel",
+      "description": "Artikelkatalog und Preise verwalten"
+    },
+    "procurement": {
+      "title": "Einkaufsverwaltung",
+      "description": "Bestellungen und Einkaufsaufträge verwalten"
+    },
+    "stock": {
+      "title": "Lagerbestand",
+      "description": "Lagerbestände und Bewegungen verwalten"
+    },
+    "admin": {
+      "title": "Verwaltung",
+      "description": "Systemeinstellungen und Benutzerverwaltung"
+    }
+  },
+  "common": {
+    "loading": "Laden...",
+    "error": "Ein Fehler ist aufgetreten",
+    "save": "Speichern",
+    "cancel": "Abbrechen",
+    "delete": "Löschen",
+    "edit": "Bearbeiten",
+    "add": "Hinzufügen",
+    "search": "Suchen",
+    "filter": "Filtern",
+    "export": "Exportieren",
+    "import": "Importieren"
+  }
+}

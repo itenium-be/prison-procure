@@ -1,0 +1,90 @@
+{
+  "nav": {
+    "dashboard": "Dashboard",
+    "suppliers": "Suppliers",
+    "articles": "Articles",
+    "procurement": "Procurement",
+    "stock": "Stock",
+    "admin": "Admin"
+  },
+  "header": {
+    "selectPrison": "Select prison",
+    "selectLanguage": "Language"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "welcome": "Welcome to the Procurement Management System",
+    "subtitle": "Manage orders and inventory for Belgian prisons",
+    "stats": {
+      "pendingOrders": "Pending orders",
+      "suppliers": "Active suppliers",
+      "articles": "Articles in catalog",
+      "lowStock": "Low stock items"
+    },
+    "recentOrders": "Recent orders",
+    "quickActions": "Quick actions",
+    "newOrder": "New order",
+    "viewStock": "View stock",
+    "manageSuppliers": "Manage suppliers"
+  },
+  "prisons": {
+    "antwerpen": "Antwerp Prison",
+    "brugge": "Bruges Prison",
+    "gent": "Ghent Prison",
+    "leuven": "Leuven Central Prison",
+    "mechelen": "Mechelen Prison",
+    "hasselt": "Hasselt Prison",
+    "tongeren": "Tongeren Prison",
+    "turnhout": "Turnhout Prison",
+    "dendermonde": "Dendermonde Prison",
+    "oudenaarde": "Oudenaarde Prison",
+    "ieper": "Ypres Prison",
+    "berkendael": "Berkendael Prison",
+    "vorst": "Forest Prison",
+    "sintgillis": "Saint-Gilles Prison",
+    "lantin": "Lantin Prison",
+    "marche": "Marche-en-Famenne Prison",
+    "namur": "Namur Prison",
+    "mons": "Mons Prison",
+    "jamioulx": "Jamioulx Prison",
+    "arlon": "Arlon Prison",
+    "dinant": "Dinant Prison",
+    "verviers": "Verviers Prison",
+    "haren": "Haren Prison"
+  },
+  "pages": {
+    "suppliers": {
+      "title": "Suppliers",
+      "description": "Manage suppliers and contact information"
+    },
+    "articles": {
+      "title": "Articles",
+      "description": "Manage article catalog and pricing"
+    },
+    "procurement": {
+      "title": "Procurement",
+      "description": "Manage orders and purchase orders"
+    },
+    "stock": {
+      "title": "Stock",
+      "description": "Manage stock levels and movements"
+    },
+    "admin": {
+      "title": "Admin",
+      "description": "System settings and user management"
+    }
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "add": "Add",
+    "search": "Search",
+    "filter": "Filter",
+    "export": "Export",
+    "import": "Import"
+  }
+}
