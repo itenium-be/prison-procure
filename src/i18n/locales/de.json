@@ -74,6 +74,67 @@
       "description": "Systemeinstellungen und Benutzerverwaltung"
     }
   },
+  "suppliers": {
+    "addNew": "Lieferant hinzufügen",
+    "newSupplier": "Neuer Lieferant",
+    "editSupplier": "Lieferant bearbeiten",
+    "status": "Status",
+    "actions": "Aktionen",
+    "blocked": "Gesperrt",
+    "activeLocal": "Aktiv",
+    "inactiveLocal": "Inaktiv",
+    "block": "Lieferant sperren",
+    "unblock": "Lieferant entsperren",
+    "activateLocal": "Für dieses Gefängnis aktivieren",
+    "deactivateLocal": "Für dieses Gefängnis deaktivieren",
+    "tabs": {
+      "general": "Allgemein",
+      "financial": "Finanzen",
+      "logistics": "Logistik"
+    },
+    "fields": {
+      "code": "Code",
+      "codePlaceholder": "z.B. SUP001",
+      "name": "Name",
+      "namePlaceholder": "Firmenname",
+      "address": "Adresse",
+      "addressPlaceholder": "Straße, Stadt, PLZ",
+      "phone": "Telefon",
+      "phonePlaceholder": "+32 ...",
+      "email": "E-Mail",
+      "emailPlaceholder": "info@firma.be",
+      "language": "Sprache",
+      "blocked": "Gesperrt",
+      "blockedYes": "Gesperrt",
+      "blockedNo": "Aktiv",
+      "vatNumber": "USt-IdNr.",
+      "vatNumberPlaceholder": "BE0123456789",
+      "iban": "IBAN",
+      "ibanPlaceholder": "BE00 0000 0000 0000",
+      "bic": "BIC",
+      "bicPlaceholder": "GEBABEBB",
+      "paymentTerms": "Zahlungsbedingungen",
+      "paymentTermsImmediate": "Sofort",
+      "days": "Tage",
+      "currency": "Währung",
+      "contactPerson": "Ansprechpartner",
+      "contactPersonPlaceholder": "Vollständiger Name",
+      "contactPhone": "Telefon",
+      "contactPhonePlaceholder": "+32 ...",
+      "contactEmail": "E-Mail",
+      "contactEmailPlaceholder": "kontakt@firma.be",
+      "openingHours": "Öffnungszeiten",
+      "openingHoursPlaceholder": "z.B. Mo-Fr 8:00-17:00",
+      "closingDays": "Schließtage",
+      "closingDaysPlaceholder": "z.B. Wochenenden, Feiertage"
+    }
+  },
+  "languages": {
+    "nl": "Niederländisch",
+    "fr": "Französisch",
+    "de": "Deutsch",
+    "en": "Englisch"
+  },
   "common": {
     "loading": "Laden...",
     "error": "Ein Fehler ist aufgetreten",
@@ -85,6 +146,7 @@
     "search": "Suchen",
     "filter": "Filtern",
     "export": "Exportieren",
-    "import": "Importieren"
+    "import": "Importieren",
+    "back": "Zurück"
   }
 }
