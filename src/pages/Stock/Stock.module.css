@@ -419,3 +419,70 @@
   color: var(--text-secondary);
   margin: 0;
 }
+
+@media (max-width: 768px) {
+  .page {
+    padding: 16px;
+  }
+
+  .tabs {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .tab {
+    padding: 10px 12px;
+    font-size: 13px;
+    white-space: nowrap;
+  }
+
+  .warehousesSection,
+  .timelineSection {
+    padding: 16px;
+  }
+
+  .sectionHeader {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .addButton {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .warehouseGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .timelineControls {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .articleSelect {
+    min-width: unset;
+  }
+
+  .dateRange {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .stockSummary {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .movementsTable th,
+  .movementsTable td {
+    padding: 10px 8px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .stockSummary {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next'
-import { Building2, Globe, User } from 'lucide-react'
+import { Building2, Globe, User, Menu } from 'lucide-react'
 import { usePrison } from '../../context/PrisonContext'
 import styles from './Header.module.css'
 
@@ -10,7 +10,11 @@ const LANGUAGES = [
   { code: 'en', label: 'EN' },
 ]
 
-export function Header() {
+interface HeaderProps {
+  onMenuClick: () => void
+}
+
+export function Header({ onMenuClick }: HeaderProps) {
   const { t, i18n } = useTranslation()
   const { selectedPrison, setSelectedPrison, prisons } = usePrison()
 
@@ -21,6 +25,9 @@ export function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.left}>
+        <button className={styles.menuButton} onClick={onMenuClick}>
+          <Menu size={24} />
+        </button>
         <h1 className={styles.pageTitle}>{t('dashboard.title')}</h1>
       </div>
       <div className={styles.right}>

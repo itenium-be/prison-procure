@@ -102,3 +102,15 @@
   background-color: var(--background-color);
   color: var(--text-primary);
 }
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .addButton {
+    width: 100%;
+    justify-content: center;
+  }
+}

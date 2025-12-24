@@ -19,11 +19,16 @@ const navItems = [
   { path: '/admin', icon: Settings, labelKey: 'nav.admin' },
 ]
 
-export function Sidebar() {
+interface SidebarProps {
+  isOpen: boolean
+  onClose: () => void
+}
+
+export function Sidebar({ isOpen, onClose }: SidebarProps) {
   const { t } = useTranslation()
 
   return (
-    <aside className={styles.sidebar}>
+    <aside className={`${styles.sidebar} ${isOpen ? styles.open : ''}`}>
       <div className={styles.logo}>
         <div className={styles.logoIcon}>
           <Warehouse size={28} />
@@ -39,6 +44,7 @@ export function Sidebar() {
               `${styles.navItem} ${isActive ? styles.active : ''}`
             }
             end={item.path === '/'}
+            onClick={onClose}
           >
             <item.icon size={20} />
             <span>{t(item.labelKey)}</span>
