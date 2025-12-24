@@ -14,6 +14,25 @@
 .left {
   display: flex;
   align-items: center;
+  gap: 12px;
+}
+
+.menuButton {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  color: var(--text-primary);
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.menuButton:hover {
+  background-color: var(--background-color);
 }
 
 .pageTitle {
@@ -104,4 +123,54 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 0 12px;
+  }
+
+  .menuButton {
+    display: flex;
+  }
+
+  .pageTitle {
+    font-size: 1rem;
+  }
+
+  .right {
+    gap: 8px;
+  }
+
+  .selector {
+    padding: 6px 8px;
+  }
+
+  .select {
+    min-width: auto;
+    max-width: 100px;
+  }
+
+  .languageSelector {
+    display: none;
+  }
+
+  .selectorIcon {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .pageTitle {
+    display: none;
+  }
+
+  .selector {
+    max-width: 140px;
+  }
+
+  .select {
+    max-width: 120px;
+    font-size: 0.75rem;
+  }
 }
