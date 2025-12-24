@@ -300,6 +300,56 @@
       "userManagementDesc": "Gérer les utilisateurs, rôles et droits d'accès",
       "prisonManagement": "Gestion des prisons",
       "prisonManagementDesc": "Gérer les prisons et les paramètres de localisation"
+    },
+    "users": {
+      "title": "Gestion des utilisateurs",
+      "description": "Gérer les utilisateurs, rôles et droits d'accès",
+      "tabs": {
+        "users": "Utilisateurs",
+        "roles": "Rôles & Droits",
+        "o365": "Intégration O365"
+      },
+      "searchPlaceholder": "Rechercher par nom ou e-mail...",
+      "addUser": "Ajouter utilisateur",
+      "editUser": "Modifier utilisateur",
+      "columns": {
+        "name": "Nom",
+        "email": "E-mail",
+        "authType": "Authentification",
+        "roles": "Rôles",
+        "prisons": "Prisons",
+        "status": "Statut",
+        "actions": "Actions"
+      },
+      "authLocal": "Local",
+      "roleNames": {
+        "central_admin": "Admin central",
+        "local_admin": "Admin local",
+        "user": "Utilisateur",
+        "viewer": "Observateur"
+      },
+      "roleDesc": {
+        "central_admin": "Accès complet à tous les systèmes et prisons",
+        "local_admin": "Gestion des prisons assignées",
+        "user": "Utilisation quotidienne du système",
+        "viewer": "Accès en lecture seule"
+      },
+      "prisonsAssigned": "prisons",
+      "statusActive": "Actif",
+      "statusBlocked": "Bloqué",
+      "block": "Bloquer",
+      "unblock": "Débloquer",
+      "generalInfo": "Informations générales",
+      "roleAssignment": "Attribution des rôles par système",
+      "prisonAssignment": "Attribution des prisons",
+      "menuRights": "Droits de menu",
+      "o365Group": "Groupe AD O365",
+      "selectGroup": "Sélectionner le groupe...",
+      "noRole": "Aucun rôle",
+      "o365Integration": "Intégration Office 365",
+      "o365Description": "Les utilisateurs sont synchronisés avec les groupes Azure Active Directory",
+      "adGroups": "Groupes AD",
+      "members": "membres"
     }
   },
   "common": {

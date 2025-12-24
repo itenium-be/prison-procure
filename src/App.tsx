@@ -6,7 +6,7 @@ import { Suppliers, SupplierDetail } from './pages/Suppliers'
 import { Articles, ArticleDetail } from './pages/Articles'
 import { Procurement } from './pages/Procurement'
 import { Stock } from './pages/Stock'
-import { Admin } from './pages/Admin'
+import { Admin, UserManagement } from './pages/Admin'
 
 function App() {
   return (
@@ -21,6 +21,7 @@ function App() {
           <Route path="procurement" element={<Procurement />} />
           <Route path="stock" element={<Stock />} />
           <Route path="admin" element={<Admin />} />
+          <Route path="admin/users" element={<UserManagement />} />
         </Route>
       </Routes>
     </PrisonProvider>

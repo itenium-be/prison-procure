@@ -300,6 +300,56 @@
       "userManagementDesc": "Beheer gebruikers, rollen en toegangsrechten",
       "prisonManagement": "Beheer gevangenissen",
       "prisonManagementDesc": "Beheer gevangenissen en locatie-instellingen"
+    },
+    "users": {
+      "title": "Gebruikersbeheer",
+      "description": "Beheer gebruikers, rollen en toegangsrechten",
+      "tabs": {
+        "users": "Gebruikers",
+        "roles": "Rollen & Rechten",
+        "o365": "O365 Koppeling"
+      },
+      "searchPlaceholder": "Zoek op naam of e-mail...",
+      "addUser": "Gebruiker toevoegen",
+      "editUser": "Gebruiker bewerken",
+      "columns": {
+        "name": "Naam",
+        "email": "E-mail",
+        "authType": "Authenticatie",
+        "roles": "Rollen",
+        "prisons": "Gevangenissen",
+        "status": "Status",
+        "actions": "Acties"
+      },
+      "authLocal": "Lokaal",
+      "roleNames": {
+        "central_admin": "Centraal beheerder",
+        "local_admin": "Lokaal beheerder",
+        "user": "Gebruiker",
+        "viewer": "Kijker"
+      },
+      "roleDesc": {
+        "central_admin": "Volledige toegang tot alle systemen en gevangenissen",
+        "local_admin": "Beheer van toegewezen gevangenissen",
+        "user": "Dagelijks gebruik van het systeem",
+        "viewer": "Alleen-lezen toegang"
+      },
+      "prisonsAssigned": "gevangenissen",
+      "statusActive": "Actief",
+      "statusBlocked": "Geblokkeerd",
+      "block": "Blokkeren",
+      "unblock": "Deblokkeren",
+      "generalInfo": "Algemene informatie",
+      "roleAssignment": "Roltoewijzing per systeem",
+      "prisonAssignment": "Toewijzing gevangenissen",
+      "menuRights": "Menu-rechten",
+      "o365Group": "O365 AD Groep",
+      "selectGroup": "Selecteer groep...",
+      "noRole": "Geen rol",
+      "o365Integration": "Office 365 Integratie",
+      "o365Description": "Gebruikers worden gesynchroniseerd met Azure Active Directory groepen",
+      "adGroups": "AD Groepen",
+      "members": "leden"
     }
   },
   "common": {

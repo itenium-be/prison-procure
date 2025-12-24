@@ -300,6 +300,56 @@
       "userManagementDesc": "Manage users, roles and access rights",
       "prisonManagement": "Prison Management",
       "prisonManagementDesc": "Manage prisons and location settings"
+    },
+    "users": {
+      "title": "User Management",
+      "description": "Manage users, roles and access rights",
+      "tabs": {
+        "users": "Users",
+        "roles": "Roles & Rights",
+        "o365": "O365 Integration"
+      },
+      "searchPlaceholder": "Search by name or email...",
+      "addUser": "Add user",
+      "editUser": "Edit user",
+      "columns": {
+        "name": "Name",
+        "email": "Email",
+        "authType": "Authentication",
+        "roles": "Roles",
+        "prisons": "Prisons",
+        "status": "Status",
+        "actions": "Actions"
+      },
+      "authLocal": "Local",
+      "roleNames": {
+        "central_admin": "Central Admin",
+        "local_admin": "Local Admin",
+        "user": "User",
+        "viewer": "Viewer"
+      },
+      "roleDesc": {
+        "central_admin": "Full access to all systems and prisons",
+        "local_admin": "Management of assigned prisons",
+        "user": "Daily system usage",
+        "viewer": "Read-only access"
+      },
+      "prisonsAssigned": "prisons",
+      "statusActive": "Active",
+      "statusBlocked": "Blocked",
+      "block": "Block",
+      "unblock": "Unblock",
+      "generalInfo": "General Information",
+      "roleAssignment": "Role assignment per system",
+      "prisonAssignment": "Prison assignment",
+      "menuRights": "Menu rights",
+      "o365Group": "O365 AD Group",
+      "selectGroup": "Select group...",
+      "noRole": "No role",
+      "o365Integration": "Office 365 Integration",
+      "o365Description": "Users are synchronized with Azure Active Directory groups",
+      "adGroups": "AD Groups",
+      "members": "members"
     }
   },
   "common": {

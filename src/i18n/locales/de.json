@@ -300,6 +300,56 @@
       "userManagementDesc": "Benutzer, Rollen und Zugriffsrechte verwalten",
       "prisonManagement": "Gefängnisverwaltung",
       "prisonManagementDesc": "Gefängnisse und Standorteinstellungen verwalten"
+    },
+    "users": {
+      "title": "Benutzerverwaltung",
+      "description": "Benutzer, Rollen und Zugriffsrechte verwalten",
+      "tabs": {
+        "users": "Benutzer",
+        "roles": "Rollen & Rechte",
+        "o365": "O365-Integration"
+      },
+      "searchPlaceholder": "Nach Name oder E-Mail suchen...",
+      "addUser": "Benutzer hinzufügen",
+      "editUser": "Benutzer bearbeiten",
+      "columns": {
+        "name": "Name",
+        "email": "E-Mail",
+        "authType": "Authentifizierung",
+        "roles": "Rollen",
+        "prisons": "Gefängnisse",
+        "status": "Status",
+        "actions": "Aktionen"
+      },
+      "authLocal": "Lokal",
+      "roleNames": {
+        "central_admin": "Zentraladmin",
+        "local_admin": "Lokaladmin",
+        "user": "Benutzer",
+        "viewer": "Betrachter"
+      },
+      "roleDesc": {
+        "central_admin": "Vollzugriff auf alle Systeme und Gefängnisse",
+        "local_admin": "Verwaltung zugewiesener Gefängnisse",
+        "user": "Tägliche Systemnutzung",
+        "viewer": "Nur-Lese-Zugriff"
+      },
+      "prisonsAssigned": "Gefängnisse",
+      "statusActive": "Aktiv",
+      "statusBlocked": "Gesperrt",
+      "block": "Sperren",
+      "unblock": "Entsperren",
+      "generalInfo": "Allgemeine Informationen",
+      "roleAssignment": "Rollenzuweisung pro System",
+      "prisonAssignment": "Gefängniszuweisung",
+      "menuRights": "Menürechte",
+      "o365Group": "O365 AD-Gruppe",
+      "selectGroup": "Gruppe auswählen...",
+      "noRole": "Keine Rolle",
+      "o365Integration": "Office 365-Integration",
+      "o365Description": "Benutzer werden mit Azure Active Directory-Gruppen synchronisiert",
+      "adGroups": "AD-Gruppen",
+      "members": "Mitglieder"
     }
   },
   "common": {
