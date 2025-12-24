@@ -183,6 +183,41 @@
     "de": "Duits",
     "en": "Engels"
   },
+  "stock": {
+    "title": "Voorraad",
+    "description": "Beheer magazijnen en voorraadniveaus",
+    "tabs": {
+      "warehouses": "Magazijnen",
+      "timeline": "Voorraad in de tijd"
+    },
+    "warehouses": {
+      "title": "Magazijnen",
+      "add": "Magazijn toevoegen",
+      "empty": "Geen magazijnen gevonden voor deze gevangenis"
+    },
+    "timeline": {
+      "selectArticle": "Selecteer artikel",
+      "chooseArticle": "Kies een artikel...",
+      "from": "Van",
+      "to": "Tot",
+      "currentStock": "Huidige voorraad",
+      "minStock": "Minimumvoorraad",
+      "status": "Status",
+      "lowStock": "Lage voorraad",
+      "stockOk": "Voorraad OK",
+      "date": "Datum",
+      "type": "Type",
+      "quantity": "Hoeveelheid",
+      "reference": "Referentie",
+      "runningStock": "Lopende voorraad",
+      "in": "Inkomend",
+      "out": "Uitgaand",
+      "forecast": "Voorspelling",
+      "forecastLow": "Let op: de voorraad is onder het minimumniveau gedaald. Bestel spoedig bij.",
+      "forecastOk": "Op basis van het huidige verbruik is er nog voorraad voor ongeveer {{days}} dagen.",
+      "selectArticlePrompt": "Selecteer een artikel om de voorraadhistorie te bekijken"
+    }
+  },
   "common": {
     "loading": "Laden...",
     "error": "Er is een fout opgetreden",

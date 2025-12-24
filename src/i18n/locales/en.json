@@ -183,6 +183,41 @@
     "de": "German",
     "en": "English"
   },
+  "stock": {
+    "title": "Stock",
+    "description": "Manage warehouses and stock levels",
+    "tabs": {
+      "warehouses": "Warehouses",
+      "timeline": "Stock over time"
+    },
+    "warehouses": {
+      "title": "Warehouses",
+      "add": "Add warehouse",
+      "empty": "No warehouses found for this prison"
+    },
+    "timeline": {
+      "selectArticle": "Select article",
+      "chooseArticle": "Choose an article...",
+      "from": "From",
+      "to": "To",
+      "currentStock": "Current stock",
+      "minStock": "Minimum stock",
+      "status": "Status",
+      "lowStock": "Low stock",
+      "stockOk": "Stock OK",
+      "date": "Date",
+      "type": "Type",
+      "quantity": "Quantity",
+      "reference": "Reference",
+      "runningStock": "Running stock",
+      "in": "Incoming",
+      "out": "Outgoing",
+      "forecast": "Forecast",
+      "forecastLow": "Warning: stock has fallen below the minimum level. Please reorder soon.",
+      "forecastOk": "Based on current consumption, stock is available for approximately {{days}} days.",
+      "selectArticlePrompt": "Select an article to view stock history"
+    }
+  },
   "common": {
     "loading": "Loading...",
     "error": "An error occurred",

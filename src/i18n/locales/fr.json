@@ -183,6 +183,41 @@
     "de": "Allemand",
     "en": "Anglais"
   },
+  "stock": {
+    "title": "Stock",
+    "description": "Gérer les entrepôts et les niveaux de stock",
+    "tabs": {
+      "warehouses": "Entrepôts",
+      "timeline": "Stock dans le temps"
+    },
+    "warehouses": {
+      "title": "Entrepôts",
+      "add": "Ajouter entrepôt",
+      "empty": "Aucun entrepôt trouvé pour cette prison"
+    },
+    "timeline": {
+      "selectArticle": "Sélectionner article",
+      "chooseArticle": "Choisir un article...",
+      "from": "De",
+      "to": "À",
+      "currentStock": "Stock actuel",
+      "minStock": "Stock minimum",
+      "status": "Statut",
+      "lowStock": "Stock faible",
+      "stockOk": "Stock OK",
+      "date": "Date",
+      "type": "Type",
+      "quantity": "Quantité",
+      "reference": "Référence",
+      "runningStock": "Stock courant",
+      "in": "Entrant",
+      "out": "Sortant",
+      "forecast": "Prévision",
+      "forecastLow": "Attention: le stock est passé sous le niveau minimum. Veuillez commander bientôt.",
+      "forecastOk": "Selon la consommation actuelle, le stock est disponible pour environ {{days}} jours.",
+      "selectArticlePrompt": "Sélectionnez un article pour voir l'historique du stock"
+    }
+  },
   "common": {
     "loading": "Chargement...",
     "error": "Une erreur s'est produite",

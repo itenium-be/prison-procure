@@ -183,6 +183,41 @@
     "de": "Deutsch",
     "en": "Englisch"
   },
+  "stock": {
+    "title": "Lagerbestand",
+    "description": "Lager und Bestandsniveaus verwalten",
+    "tabs": {
+      "warehouses": "Lager",
+      "timeline": "Bestand im Zeitverlauf"
+    },
+    "warehouses": {
+      "title": "Lager",
+      "add": "Lager hinzufügen",
+      "empty": "Keine Lager für dieses Gefängnis gefunden"
+    },
+    "timeline": {
+      "selectArticle": "Artikel auswählen",
+      "chooseArticle": "Artikel wählen...",
+      "from": "Von",
+      "to": "Bis",
+      "currentStock": "Aktueller Bestand",
+      "minStock": "Mindestbestand",
+      "status": "Status",
+      "lowStock": "Niedriger Bestand",
+      "stockOk": "Bestand OK",
+      "date": "Datum",
+      "type": "Typ",
+      "quantity": "Menge",
+      "reference": "Referenz",
+      "runningStock": "Laufender Bestand",
+      "in": "Eingang",
+      "out": "Ausgang",
+      "forecast": "Prognose",
+      "forecastLow": "Warnung: Der Bestand ist unter das Mindestniveau gefallen. Bitte bald nachbestellen.",
+      "forecastOk": "Basierend auf dem aktuellen Verbrauch reicht der Bestand noch für etwa {{days}} Tage.",
+      "selectArticlePrompt": "Wählen Sie einen Artikel, um die Bestandshistorie anzuzeigen"
+    }
+  },
   "common": {
     "loading": "Laden...",
     "error": "Ein Fehler ist aufgetreten",
