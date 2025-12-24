@@ -51,7 +51,6 @@ export const DUMMY_WAREHOUSES: Warehouse[] = [
 function generateMovements(articleId: string, articleCode: string, articleName: string, warehouseId: string): StockMovement[] {
   const movements: StockMovement[] = []
   let runningStock = 100 // Start with initial stock
-  const startDate = new Date('2024-12-01')
 
   // Initial stock
   movements.push({

@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Warehouse, Package, Plus, TrendingUp, TrendingDown, AlertTriangle, Pencil, Trash2 } from 'lucide-react'
 import { usePrison } from '../../context/PrisonContext'
-import { DUMMY_WAREHOUSES, DUMMY_ARTICLE_STOCKS, Warehouse as WarehouseType, ArticleStock } from '../../data/stock'
+import { DUMMY_WAREHOUSES, DUMMY_ARTICLE_STOCKS, ArticleStock } from '../../data/stock'
 import styles from './Stock.module.css'
 
 type TabType = 'warehouses' | 'timeline'

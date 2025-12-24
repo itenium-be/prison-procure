@@ -109,9 +109,9 @@ export function Articles() {
         </button>
       </div>
 
-      <DataTable
-        data={DUMMY_ARTICLES as unknown as Record<string, unknown>[]}
-        columns={columns as Column<Record<string, unknown>>[]}
+      <DataTable<Article>
+        data={DUMMY_ARTICLES}
+        columns={columns}
         keyField="id"
       />
     </div>
