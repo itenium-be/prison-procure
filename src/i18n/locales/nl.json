@@ -9,6 +9,7 @@
   },
   "header": {
     "selectPrison": "Selecteer gevangenis",
+    "globalManagement": "Centraal beheer",
     "selectLanguage": "Taal"
   },
   "dashboard": {

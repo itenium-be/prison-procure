@@ -29,16 +29,30 @@ export function Header() {
           <select
             value={selectedPrison?.id || ''}
             onChange={(e) => {
-              const prison = prisons.find((p) => p.id === e.target.value)
-              setSelectedPrison(prison || null)
+              if (e.target.value === '') {
+                setSelectedPrison(null)
+              } else if (e.target.value === 'global') {
+                setSelectedPrison({ id: 'global', nameKey: 'header.globalManagement' })
+              } else {
+                const prison = prisons.find((p) => p.id === e.target.value)
+                setSelectedPrison(prison || null)
+              }
             }}
             className={styles.select}
           >
-            {prisons.map((prison) => (
-              <option key={prison.id} value={prison.id}>
-                {t(prison.nameKey)}
-              </option>
-            ))}
+            <option value="" disabled>
+              {t('header.selectPrison')}
+            </option>
+            <option value="global">
+              {t('header.globalManagement')}
+            </option>
+            <optgroup label="─────────────────">
+              {prisons.map((prison) => (
+                <option key={prison.id} value={prison.id}>
+                  {t(prison.nameKey)}
+                </option>
+              ))}
+            </optgroup>
           </select>
         </div>
         <div className={styles.languageSelector}>
