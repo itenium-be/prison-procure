@@ -87,6 +87,54 @@
       "published": "Publié"
     }
   },
+  "articles": {
+    "title": "Articles",
+    "description": "Gérer le catalogue et les prix",
+    "addArticle": "Ajouter article",
+    "columns": {
+      "code": "Code article",
+      "description": "Description",
+      "group": "Groupe d'articles",
+      "subgroup": "Sous-groupe",
+      "packaging": "Emballage",
+      "unit": "Unité",
+      "brand": "Marque",
+      "eanCode": "Code EAN",
+      "intrastat": "Intrastat",
+      "blocked": "Bloqué"
+    },
+    "groups": {
+      "food": "Alimentation",
+      "beverages": "Boissons",
+      "hygiene": "Hygiène",
+      "cleaning": "Nettoyage",
+      "office": "Bureau"
+    },
+    "subgroups": {
+      "bread": "Pain",
+      "dairy": "Produits laitiers",
+      "meat": "Viande",
+      "vegetables": "Légumes",
+      "canned": "Conserves",
+      "frozen": "Surgelés",
+      "softdrinks": "Boissons gazeuses",
+      "water": "Eau",
+      "juice": "Jus",
+      "coffee_tea": "Café & Thé",
+      "soap": "Savon",
+      "dental": "Soins dentaires",
+      "paper": "Papier",
+      "detergent": "Détergents",
+      "disinfectant": "Désinfectant",
+      "tools": "Outils",
+      "paper_office": "Papier",
+      "writing": "Fournitures d'écriture"
+    },
+    "units": {
+      "piece": "pce",
+      "kg": "kg"
+    }
+  },
   "common": {
     "loading": "Chargement...",
     "error": "Une erreur s'est produite",

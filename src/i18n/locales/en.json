@@ -87,6 +87,54 @@
       "published": "Published"
     }
   },
+  "articles": {
+    "title": "Articles",
+    "description": "Manage article catalog and pricing",
+    "addArticle": "Add article",
+    "columns": {
+      "code": "Article code",
+      "description": "Description",
+      "group": "Article group",
+      "subgroup": "Article subgroup",
+      "packaging": "Packaging",
+      "unit": "Unit",
+      "brand": "Brand",
+      "eanCode": "EAN code",
+      "intrastat": "Intrastat",
+      "blocked": "Blocked"
+    },
+    "groups": {
+      "food": "Food",
+      "beverages": "Beverages",
+      "hygiene": "Hygiene",
+      "cleaning": "Cleaning",
+      "office": "Office"
+    },
+    "subgroups": {
+      "bread": "Bread",
+      "dairy": "Dairy",
+      "meat": "Meat",
+      "vegetables": "Vegetables",
+      "canned": "Canned goods",
+      "frozen": "Frozen",
+      "softdrinks": "Soft drinks",
+      "water": "Water",
+      "juice": "Juice",
+      "coffee_tea": "Coffee & Tea",
+      "soap": "Soap",
+      "dental": "Dental care",
+      "paper": "Paper",
+      "detergent": "Detergent",
+      "disinfectant": "Disinfectant",
+      "tools": "Tools",
+      "paper_office": "Paper",
+      "writing": "Writing supplies"
+    },
+    "units": {
+      "piece": "pcs",
+      "kg": "kg"
+    }
+  },
   "common": {
     "loading": "Loading...",
     "error": "An error occurred",

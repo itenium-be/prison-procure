@@ -87,6 +87,54 @@
       "published": "Gepubliceerd"
     }
   },
+  "articles": {
+    "title": "Artikelen",
+    "description": "Beheer artikelcatalogus en prijzen",
+    "addArticle": "Artikel toevoegen",
+    "columns": {
+      "code": "Artikelcode",
+      "description": "Omschrijving",
+      "group": "Artikelgroep",
+      "subgroup": "Artikelsubgroep",
+      "packaging": "Verpakking",
+      "unit": "Eenheid",
+      "brand": "Merk",
+      "eanCode": "EAN-code",
+      "intrastat": "Intrastat",
+      "blocked": "Geblokkeerd"
+    },
+    "groups": {
+      "food": "Voeding",
+      "beverages": "Dranken",
+      "hygiene": "Hygiëne",
+      "cleaning": "Schoonmaak",
+      "office": "Kantoor"
+    },
+    "subgroups": {
+      "bread": "Brood",
+      "dairy": "Zuivel",
+      "meat": "Vlees",
+      "vegetables": "Groenten",
+      "canned": "Conserven",
+      "frozen": "Diepvries",
+      "softdrinks": "Frisdranken",
+      "water": "Water",
+      "juice": "Sappen",
+      "coffee_tea": "Koffie & Thee",
+      "soap": "Zeep",
+      "dental": "Tandverzorging",
+      "paper": "Papier",
+      "detergent": "Wasmiddelen",
+      "disinfectant": "Desinfectie",
+      "tools": "Gereedschap",
+      "paper_office": "Papier",
+      "writing": "Schrijfwaren"
+    },
+    "units": {
+      "piece": "st",
+      "kg": "kg"
+    }
+  },
   "common": {
     "loading": "Laden...",
     "error": "Er is een fout opgetreden",
