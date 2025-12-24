@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useNavigate, useParams } from 'react-router-dom'
 import { ArrowLeft, Building2, CreditCard, Truck } from 'lucide-react'
@@ -49,6 +49,86 @@ const initialFormData: SupplierFormData = {
   closingDays: '',
 }
 
+// Mock data - in a real app this would come from an API
+const mockSuppliers: Record<string, SupplierFormData> = {
+  '1': {
+    code: 'SUP001',
+    name: 'Acme Foods NV',
+    address: 'Industrielaan 25\n2000 Antwerpen',
+    phone: '+32 2 123 45 67',
+    email: 'info@acmefoods.be',
+    language: 'nl',
+    blocked: false,
+    vatNumber: 'BE0123456789',
+    iban: 'BE68 5390 0754 7034',
+    bic: 'TRIOBEBB',
+    paymentTerms: '30',
+    currency: 'EUR',
+    contactPerson: 'Jan Janssens',
+    contactPhone: '+32 2 123 45 68',
+    contactEmail: 'jan.janssens@acmefoods.be',
+    openingHours: 'Ma-Vr 8:00-17:00',
+    closingDays: 'Weekends, feestdagen',
+  },
+  '2': {
+    code: 'SUP002',
+    name: 'Belgian Supplies BVBA',
+    address: 'Havenstraat 100\n9000 Gent',
+    phone: '+32 3 234 56 78',
+    email: 'contact@belsupplies.be',
+    language: 'nl',
+    blocked: false,
+    vatNumber: 'BE0987654321',
+    iban: 'BE71 0961 2345 6789',
+    bic: 'GKCCBEBB',
+    paymentTerms: '45',
+    currency: 'EUR',
+    contactPerson: 'Marie Peeters',
+    contactPhone: '+32 3 234 56 79',
+    contactEmail: 'marie@belsupplies.be',
+    openingHours: 'Ma-Vr 7:30-16:30',
+    closingDays: 'Weekends',
+  },
+  '3': {
+    code: 'SUP003',
+    name: 'Euro Logistics SA',
+    address: 'Rue de l\'Industrie 50\n4000 Liège',
+    phone: '+32 4 345 67 89',
+    email: 'orders@eurologistics.eu',
+    language: 'fr',
+    blocked: true,
+    vatNumber: 'BE0456789123',
+    iban: 'BE23 0000 1234 5678',
+    bic: 'BPOTBEB1',
+    paymentTerms: '60',
+    currency: 'EUR',
+    contactPerson: 'Pierre Dubois',
+    contactPhone: '+32 4 345 67 90',
+    contactEmail: 'p.dubois@eurologistics.eu',
+    openingHours: 'Lun-Ven 9:00-18:00',
+    closingDays: 'Week-ends, jours fériés',
+  },
+  '4': {
+    code: 'SUP004',
+    name: 'Fresh Products BV',
+    address: 'Kerkstraat 15\n1000 Brussel',
+    phone: '+31 20 456 78 90',
+    email: 'sales@freshproducts.nl',
+    language: 'nl',
+    blocked: false,
+    vatNumber: 'BE0789123456',
+    iban: 'BE45 3100 1234 5678',
+    bic: 'BBRUBEBB',
+    paymentTerms: '14',
+    currency: 'EUR',
+    contactPerson: 'Lisa De Smet',
+    contactPhone: '+32 2 456 78 91',
+    contactEmail: 'lisa@freshproducts.nl',
+    openingHours: 'Ma-Za 6:00-14:00',
+    closingDays: 'Zondag',
+  },
+}
+
 export function SupplierDetail() {
   const { t } = useTranslation()
   const navigate = useNavigate()
@@ -57,6 +137,16 @@ export function SupplierDetail() {
 
   const [activeTab, setActiveTab] = useState<TabType>('general')
   const [formData, setFormData] = useState<SupplierFormData>(initialFormData)
+
+  useEffect(() => {
+    if (!isNew && id) {
+      // In a real app, this would be an API call
+      const supplier = mockSuppliers[id]
+      if (supplier) {
+        setFormData(supplier)
+      }
+    }
+  }, [id, isNew])
 
   const tabs = [
     { id: 'general' as TabType, label: t('suppliers.tabs.general'), icon: Building2 },
