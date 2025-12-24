@@ -96,7 +96,14 @@ export function Suppliers() {
           <tbody>
             {suppliers.map(supplier => (
               <tr key={supplier.id} className={supplier.blocked ? styles.blockedRow : ''}>
-                <td className={styles.code}>{supplier.code}</td>
+                <td>
+                  <button
+                    className={styles.codeLink}
+                    onClick={() => handleEdit(supplier.id)}
+                  >
+                    {supplier.code}
+                  </button>
+                </td>
                 <td>{supplier.name}</td>
                 <td>{supplier.email}</td>
                 <td>{supplier.phone}</td>
