@@ -292,6 +292,16 @@
       "selectArticlePrompt": "Select an article to view stock history"
     }
   },
+  "admin": {
+    "title": "Admin",
+    "description": "System settings and configuration",
+    "tiles": {
+      "userManagement": "User Management",
+      "userManagementDesc": "Manage users, roles and access rights",
+      "prisonManagement": "Prison Management",
+      "prisonManagementDesc": "Manage prisons and location settings"
+    }
+  },
   "common": {
     "loading": "Loading...",
     "error": "An error occurred",

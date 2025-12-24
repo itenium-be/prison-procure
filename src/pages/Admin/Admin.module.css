@@ -1,30 +1,68 @@
 .page {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: calc(100vh - 112px);
+  padding: 24px;
 }
 
-.placeholder {
-  text-align: center;
-  padding: 48px;
-  background-color: var(--card-bg);
-  border-radius: 12px;
-  border: 1px solid var(--border-color);
+.header {
+  margin-bottom: 32px;
 }
 
-.icon {
-  color: var(--secondary-color);
-  margin-bottom: 16px;
-}
-
-.placeholder h2 {
-  font-size: 1.5rem;
+.header h1 {
+  font-size: 1.75rem;
   font-weight: 600;
   color: var(--text-primary);
   margin-bottom: 8px;
 }
 
-.placeholder p {
+.header p {
   color: var(--text-secondary);
+}
+
+.tilesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 32px 24px;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tile:hover {
+  border-color: var(--primary-color);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.tileIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 12px;
+  margin-bottom: 16px;
+}
+
+.tile h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.tile p {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
 }

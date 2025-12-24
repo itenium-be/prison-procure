@@ -292,6 +292,16 @@
       "selectArticlePrompt": "Wählen Sie einen Artikel, um die Bestandshistorie anzuzeigen"
     }
   },
+  "admin": {
+    "title": "Verwaltung",
+    "description": "Systemeinstellungen und Konfiguration",
+    "tiles": {
+      "userManagement": "Benutzerverwaltung",
+      "userManagementDesc": "Benutzer, Rollen und Zugriffsrechte verwalten",
+      "prisonManagement": "Gefängnisverwaltung",
+      "prisonManagementDesc": "Gefängnisse und Standorteinstellungen verwalten"
+    }
+  },
   "common": {
     "loading": "Laden...",
     "error": "Ein Fehler ist aufgetreten",

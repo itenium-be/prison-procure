@@ -292,6 +292,16 @@
       "selectArticlePrompt": "Sélectionnez un article pour voir l'historique du stock"
     }
   },
+  "admin": {
+    "title": "Administration",
+    "description": "Paramètres système et configuration",
+    "tiles": {
+      "userManagement": "Gestion des utilisateurs",
+      "userManagementDesc": "Gérer les utilisateurs, rôles et droits d'accès",
+      "prisonManagement": "Gestion des prisons",
+      "prisonManagementDesc": "Gérer les prisons et les paramètres de localisation"
+    }
+  },
   "common": {
     "loading": "Chargement...",
     "error": "Une erreur s'est produite",

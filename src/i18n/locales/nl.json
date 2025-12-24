@@ -292,6 +292,16 @@
       "selectArticlePrompt": "Selecteer een artikel om de voorraadhistorie te bekijken"
     }
   },
+  "admin": {
+    "title": "Beheer",
+    "description": "Systeeminstellingen en configuratie",
+    "tiles": {
+      "userManagement": "Gebruikersbeheer",
+      "userManagementDesc": "Beheer gebruikers, rollen en toegangsrechten",
+      "prisonManagement": "Beheer gevangenissen",
+      "prisonManagementDesc": "Beheer gevangenissen en locatie-instellingen"
+    }
+  },
   "common": {
     "loading": "Laden...",
     "error": "Er is een fout opgetreden",
