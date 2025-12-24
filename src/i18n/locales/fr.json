@@ -9,6 +9,7 @@
   },
   "header": {
     "selectPrison": "Sélectionner la prison",
+    "globalManagement": "Gestion centrale",
     "selectLanguage": "Langue"
   },
   "dashboard": {

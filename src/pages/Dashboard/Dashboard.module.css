@@ -186,4 +186,41 @@
   .statsGrid {
     grid-template-columns: 1fr;
   }
+
+  .welcome {
+    padding: 20px;
+  }
+
+  .welcome h2 {
+    font-size: 1.25rem;
+  }
+
+  .statCard {
+    padding: 16px;
+  }
+
+  .statIcon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .statValue {
+    font-size: 1.25rem;
+  }
+
+  .recentOrders,
+  .quickActions {
+    padding: 16px;
+  }
+
+  .ordersTable th,
+  .ordersTable td {
+    padding: 8px 4px;
+    font-size: 0.75rem;
+  }
+
+  .actionButton {
+    padding: 12px;
+    font-size: 0.875rem;
+  }
 }

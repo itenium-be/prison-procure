@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next'
-import { Building2, Globe, User } from 'lucide-react'
+import { Building2, Globe, User, Menu } from 'lucide-react'
 import { usePrison } from '../../context/PrisonContext'
 import styles from './Header.module.css'
 
@@ -10,7 +10,11 @@ const LANGUAGES = [
   { code: 'en', label: 'EN' },
 ]
 
-export function Header() {
+interface HeaderProps {
+  onMenuClick: () => void
+}
+
+export function Header({ onMenuClick }: HeaderProps) {
   const { t, i18n } = useTranslation()
   const { selectedPrison, setSelectedPrison, prisons } = usePrison()
 
@@ -21,6 +25,9 @@ export function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.left}>
+        <button className={styles.menuButton} onClick={onMenuClick}>
+          <Menu size={24} />
+        </button>
         <h1 className={styles.pageTitle}>{t('dashboard.title')}</h1>
       </div>
       <div className={styles.right}>
@@ -29,16 +36,30 @@ export function Header() {
           <select
             value={selectedPrison?.id || ''}
             onChange={(e) => {
-              const prison = prisons.find((p) => p.id === e.target.value)
-              setSelectedPrison(prison || null)
+              if (e.target.value === '') {
+                setSelectedPrison(null)
+              } else if (e.target.value === 'global') {
+                setSelectedPrison({ id: 'global', nameKey: 'header.globalManagement' })
+              } else {
+                const prison = prisons.find((p) => p.id === e.target.value)
+                setSelectedPrison(prison || null)
+              }
             }}
             className={styles.select}
           >
-            {prisons.map((prison) => (
-              <option key={prison.id} value={prison.id}>
-                {t(prison.nameKey)}
-              </option>
-            ))}
+            <option value="" disabled>
+              {t('header.selectPrison')}
+            </option>
+            <option value="global">
+              {t('header.globalManagement')}
+            </option>
+            <optgroup label="─────────────────">
+              {prisons.map((prison) => (
+                <option key={prison.id} value={prison.id}>
+                  {t(prison.nameKey)}
+                </option>
+              ))}
+            </optgroup>
           </select>
         </div>
         <div className={styles.languageSelector}>
