@@ -302,6 +302,57 @@
       "prisonManagementDesc": "Gefängnisse und Standorteinstellungen verwalten"
     }
   },
+  "adminPrisons": {
+    "title": "Gefängnisverwaltung",
+    "description": "Gefängnisse und Standorteinstellungen verwalten",
+    "addNew": "Gefängnis hinzufügen",
+    "newPrison": "Neues Gefängnis",
+    "editPrison": "Gefängnis bearbeiten",
+    "status": "Status",
+    "actions": "Aktionen",
+    "blocked": "Gesperrt",
+    "active": "Aktiv",
+    "block": "Gefängnis sperren",
+    "unblock": "Gefängnis entsperren",
+    "tabs": {
+      "general": "Allgemein",
+      "location": "Standort",
+      "capacity": "Kapazität"
+    },
+    "regions": {
+      "flanders": "Flandern",
+      "wallonia": "Wallonien",
+      "brussels": "Brüssel"
+    },
+    "fields": {
+      "code": "Code",
+      "codePlaceholder": "z.B. ANT",
+      "name": "Name",
+      "namePlaceholder": "Gefängnisname",
+      "phone": "Telefon",
+      "phonePlaceholder": "+32 ...",
+      "email": "E-Mail",
+      "emailPlaceholder": "info@gefaengnis.be",
+      "blocked": "Gesperrt",
+      "blockedYes": "Gesperrt",
+      "blockedNo": "Aktiv",
+      "address": "Adresse",
+      "addressPlaceholder": "Straße und Hausnummer",
+      "city": "Stadt",
+      "cityPlaceholder": "Stadtname",
+      "postalCode": "Postleitzahl",
+      "postalCodePlaceholder": "z.B. 2000",
+      "region": "Region",
+      "capacity": "Kapazität",
+      "capacityPlaceholder": "Anzahl der Plätze",
+      "currentOccupancy": "Aktuelle Belegung",
+      "currentOccupancyPlaceholder": "Anzahl der Insassen",
+      "director": "Direktor",
+      "directorPlaceholder": "Vollständiger Name",
+      "directorPhone": "Telefon des Direktors",
+      "directorEmail": "E-Mail des Direktors"
+    }
+  },
   "common": {
     "loading": "Laden...",
     "error": "Ein Fehler ist aufgetreten",

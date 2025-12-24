@@ -302,6 +302,57 @@
       "prisonManagementDesc": "Manage prisons and location settings"
     }
   },
+  "adminPrisons": {
+    "title": "Prison Management",
+    "description": "Manage prisons and location settings",
+    "addNew": "Add prison",
+    "newPrison": "New prison",
+    "editPrison": "Edit prison",
+    "status": "Status",
+    "actions": "Actions",
+    "blocked": "Blocked",
+    "active": "Active",
+    "block": "Block prison",
+    "unblock": "Unblock prison",
+    "tabs": {
+      "general": "General",
+      "location": "Location",
+      "capacity": "Capacity"
+    },
+    "regions": {
+      "flanders": "Flanders",
+      "wallonia": "Wallonia",
+      "brussels": "Brussels"
+    },
+    "fields": {
+      "code": "Code",
+      "codePlaceholder": "e.g. ANT",
+      "name": "Name",
+      "namePlaceholder": "Prison name",
+      "phone": "Phone",
+      "phonePlaceholder": "+32 ...",
+      "email": "Email",
+      "emailPlaceholder": "info@prison.be",
+      "blocked": "Blocked",
+      "blockedYes": "Blocked",
+      "blockedNo": "Active",
+      "address": "Address",
+      "addressPlaceholder": "Street and number",
+      "city": "City",
+      "cityPlaceholder": "City name",
+      "postalCode": "Postal code",
+      "postalCodePlaceholder": "e.g. 2000",
+      "region": "Region",
+      "capacity": "Capacity",
+      "capacityPlaceholder": "Number of places",
+      "currentOccupancy": "Current occupancy",
+      "currentOccupancyPlaceholder": "Number of inmates",
+      "director": "Director",
+      "directorPlaceholder": "Full name",
+      "directorPhone": "Director phone",
+      "directorEmail": "Director email"
+    }
+  },
   "common": {
     "loading": "Loading...",
     "error": "An error occurred",

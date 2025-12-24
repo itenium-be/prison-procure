@@ -302,6 +302,57 @@
       "prisonManagementDesc": "Gérer les prisons et les paramètres de localisation"
     }
   },
+  "adminPrisons": {
+    "title": "Gestion des prisons",
+    "description": "Gérer les prisons et les paramètres de localisation",
+    "addNew": "Ajouter une prison",
+    "newPrison": "Nouvelle prison",
+    "editPrison": "Modifier la prison",
+    "status": "Statut",
+    "actions": "Actions",
+    "blocked": "Bloquée",
+    "active": "Active",
+    "block": "Bloquer la prison",
+    "unblock": "Débloquer la prison",
+    "tabs": {
+      "general": "Général",
+      "location": "Localisation",
+      "capacity": "Capacité"
+    },
+    "regions": {
+      "flanders": "Flandre",
+      "wallonia": "Wallonie",
+      "brussels": "Bruxelles"
+    },
+    "fields": {
+      "code": "Code",
+      "codePlaceholder": "ex. ANT",
+      "name": "Nom",
+      "namePlaceholder": "Nom de la prison",
+      "phone": "Téléphone",
+      "phonePlaceholder": "+32 ...",
+      "email": "E-mail",
+      "emailPlaceholder": "info@prison.be",
+      "blocked": "Bloquée",
+      "blockedYes": "Bloquée",
+      "blockedNo": "Active",
+      "address": "Adresse",
+      "addressPlaceholder": "Rue et numéro",
+      "city": "Ville",
+      "cityPlaceholder": "Nom de la ville",
+      "postalCode": "Code postal",
+      "postalCodePlaceholder": "ex. 2000",
+      "region": "Région",
+      "capacity": "Capacité",
+      "capacityPlaceholder": "Nombre de places",
+      "currentOccupancy": "Occupation actuelle",
+      "currentOccupancyPlaceholder": "Nombre de détenus",
+      "director": "Directeur",
+      "directorPlaceholder": "Nom complet",
+      "directorPhone": "Téléphone du directeur",
+      "directorEmail": "E-mail du directeur"
+    }
+  },
   "common": {
     "loading": "Chargement...",
     "error": "Une erreur s'est produite",

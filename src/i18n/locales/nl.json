@@ -302,6 +302,57 @@
       "prisonManagementDesc": "Beheer gevangenissen en locatie-instellingen"
     }
   },
+  "adminPrisons": {
+    "title": "Beheer gevangenissen",
+    "description": "Beheer gevangenissen en locatie-instellingen",
+    "addNew": "Gevangenis toevoegen",
+    "newPrison": "Nieuwe gevangenis",
+    "editPrison": "Gevangenis bewerken",
+    "status": "Status",
+    "actions": "Acties",
+    "blocked": "Geblokkeerd",
+    "active": "Actief",
+    "block": "Gevangenis blokkeren",
+    "unblock": "Gevangenis deblokkeren",
+    "tabs": {
+      "general": "Algemeen",
+      "location": "Locatie",
+      "capacity": "Capaciteit"
+    },
+    "regions": {
+      "flanders": "Vlaanderen",
+      "wallonia": "Wallonië",
+      "brussels": "Brussel"
+    },
+    "fields": {
+      "code": "Code",
+      "codePlaceholder": "bv. ANT",
+      "name": "Naam",
+      "namePlaceholder": "Gevangenisnaam",
+      "phone": "Telefoon",
+      "phonePlaceholder": "+32 ...",
+      "email": "E-mail",
+      "emailPlaceholder": "info@gevangenis.be",
+      "blocked": "Geblokkeerd",
+      "blockedYes": "Geblokkeerd",
+      "blockedNo": "Actief",
+      "address": "Adres",
+      "addressPlaceholder": "Straat en huisnummer",
+      "city": "Stad",
+      "cityPlaceholder": "Stadsnaam",
+      "postalCode": "Postcode",
+      "postalCodePlaceholder": "bv. 2000",
+      "region": "Regio",
+      "capacity": "Capaciteit",
+      "capacityPlaceholder": "Aantal plaatsen",
+      "currentOccupancy": "Huidige bezetting",
+      "currentOccupancyPlaceholder": "Aantal gedetineerden",
+      "director": "Directeur",
+      "directorPlaceholder": "Volledige naam",
+      "directorPhone": "Telefoon directeur",
+      "directorEmail": "E-mail directeur"
+    }
+  },
   "common": {
     "loading": "Laden...",
     "error": "Er is een fout opgetreden",

@@ -7,6 +7,7 @@ import { Articles, ArticleDetail } from './pages/Articles'
 import { Procurement } from './pages/Procurement'
 import { Stock } from './pages/Stock'
 import { Admin } from './pages/Admin'
+import { Prisons, PrisonDetail } from './pages/Prisons'
 
 function App() {
   return (
@@ -21,6 +22,8 @@ function App() {
           <Route path="procurement" element={<Procurement />} />
           <Route path="stock" element={<Stock />} />
           <Route path="admin" element={<Admin />} />
+          <Route path="admin/prisons" element={<Prisons />} />
+          <Route path="admin/prisons/:id" element={<PrisonDetail />} />
         </Route>
       </Routes>
     </PrisonProvider>
