@@ -1,39 +1,40 @@
 .page {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
+  padding: 24px;
 }
 
 .header {
   display: flex;
-  align-items: flex-start;
   justify-content: space-between;
-  gap: 16px;
+  align-items: flex-start;
+  margin-bottom: 24px;
 }
 
-.header h1 {
+.headerLeft h1 {
   font-size: 1.5rem;
   font-weight: 600;
   color: var(--text-primary);
-  margin-bottom: 4px;
+  margin: 0 0 4px 0;
 }
 
-.header p {
+.subtitle {
   color: var(--text-secondary);
-  font-size: 0.875rem;
+  margin: 0;
+  font-size: 0.9375rem;
 }
 
 .addButton {
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 10px 16px;
+  padding: 12px 20px;
   background-color: var(--primary-color);
   color: white;
+  border: none;
   border-radius: 8px;
+  font-size: 0.9375rem;
   font-weight: 500;
-  font-size: 0.875rem;
-  transition: background-color 0.2s ease;
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
 
 .addButton:hover {
@@ -122,9 +123,13 @@
 }
 
 @media (max-width: 768px) {
+  .page {
+    padding: 16px;
+  }
+
   .header {
     flex-direction: column;
-    align-items: stretch;
+    gap: 16px;
   }
 
   .addButton {
