@@ -7,6 +7,7 @@ import {
   ShoppingCart,
   Warehouse,
   Settings,
+  ArrowUpCircle,
 } from 'lucide-react'
 import { usePrison, AppMode } from '../../context/PrisonContext'
 import styles from './Sidebar.module.css'
@@ -23,6 +24,7 @@ const navItems: NavItem[] = [
   { path: '/suppliers', icon: Truck, labelKey: 'nav.suppliers', modes: ['central', 'local'] },
   { path: '/articles', icon: Package, labelKey: 'nav.articles', modes: ['central', 'local'] },
   { path: '/procurement', icon: ShoppingCart, labelKey: 'nav.procurement', modes: ['local'] },
+  { path: '/sales', icon: ArrowUpCircle, labelKey: 'nav.sales', modes: ['local'] },
   { path: '/stock', icon: Warehouse, labelKey: 'nav.stock', modes: ['local'] },
   { path: '/admin', icon: Settings, labelKey: 'nav.admin', modes: ['central'] },
 ]
