@@ -8,6 +8,8 @@ import {
   Warehouse,
   Settings,
   ArrowUpCircle,
+  ChevronsLeft,
+  ChevronsRight,
 } from 'lucide-react'
 import { usePrison, AppMode } from '../../context/PrisonContext'
 import styles from './Sidebar.module.css'
@@ -31,22 +33,24 @@ const navItems: NavItem[] = [
 
 interface SidebarProps {
   isOpen: boolean
+  isCollapsed: boolean
   onClose: () => void
+  onToggleCollapse: () => void
 }
 
-export function Sidebar({ isOpen, onClose }: SidebarProps) {
+export function Sidebar({ isOpen, isCollapsed, onClose, onToggleCollapse }: SidebarProps) {
   const { t } = useTranslation()
   const { mode } = usePrison()
 
   const filteredNavItems = navItems.filter((item) => item.modes.includes(mode))
 
   return (
-    <aside className={`${styles.sidebar} ${isOpen ? styles.open : ''}`}>
+    <aside className={`${styles.sidebar} ${isOpen ? styles.open : ''} ${isCollapsed ? styles.collapsed : ''}`}>
       <div className={styles.logo}>
         <div className={styles.logoIcon}>
           <Warehouse size={28} />
         </div>
-        <span className={styles.logoText}>PrisonProcure</span>
+        {!isCollapsed && <span className={styles.logoText}>PrisonProcure</span>}
       </div>
       <nav className={styles.nav}>
         {filteredNavItems.map((item) => (
@@ -58,14 +62,22 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
             }
             end={item.path === '/'}
             onClick={onClose}
+            title={isCollapsed ? t(item.labelKey) : undefined}
           >
             <item.icon size={20} />
-            <span>{t(item.labelKey)}</span>
+            {!isCollapsed && <span>{t(item.labelKey)}</span>}
           </NavLink>
         ))}
       </nav>
       <div className={styles.footer}>
-        <p>POC v0.1.0</p>
+        <button
+          className={styles.collapseButton}
+          onClick={onToggleCollapse}
+          title={isCollapsed ? t('nav.expand') : t('nav.collapse')}
+        >
+          {isCollapsed ? <ChevronsRight size={20} /> : <ChevronsLeft size={20} />}
+          {!isCollapsed && <span>{t('nav.collapse')}</span>}
+        </button>
       </div>
     </aside>
   )

@@ -8,6 +8,11 @@
   position: fixed;
   left: 0;
   top: 0;
+  transition: width 0.3s ease;
+}
+
+.sidebar.collapsed {
+  width: 72px;
 }
 
 .logo {
@@ -64,10 +69,43 @@
 }
 
 .footer {
-  padding: 16px 24px;
+  padding: 12px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
-  font-size: 0.75rem;
-  color: rgba(255, 255, 255, 0.5);
+}
+
+.collapseButton {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.collapseButton:hover {
+  background-color: var(--sidebar-hover);
+  color: var(--sidebar-text);
+}
+
+.sidebar.collapsed .collapseButton {
+  justify-content: center;
+}
+
+.sidebar.collapsed .logo {
+  justify-content: center;
+  padding: 20px 12px;
+}
+
+.sidebar.collapsed .navItem {
+  justify-content: center;
+  padding: 12px;
 }
 
 @media (max-width: 1024px) {
