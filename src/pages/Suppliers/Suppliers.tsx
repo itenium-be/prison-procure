@@ -105,8 +105,8 @@ export function Suppliers() {
                   </button>
                 </td>
                 <td>{supplier.name}</td>
-                <td>{supplier.email}</td>
-                <td>{supplier.phone}</td>
+                <td><a href={`mailto:${supplier.email}`} className={styles.link}>{supplier.email}</a></td>
+                <td><a href={`tel:${supplier.phone}`} className={styles.link}>{supplier.phone}</a></td>
                 <td>
                   <div className={styles.statusBadges}>
                     {supplier.blocked && (

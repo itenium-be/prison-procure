@@ -111,7 +111,7 @@ export function Prisons() {
                   </span>
                 </td>
                 <td>{prison.capacity}</td>
-                <td>{prison.phone}</td>
+                <td><a href={`tel:${prison.phone}`} className={styles.link}>{prison.phone}</a></td>
                 <td>
                   <div className={styles.statusBadges}>
                     {prison.blocked ? (
