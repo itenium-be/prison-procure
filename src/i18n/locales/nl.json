@@ -17,12 +17,28 @@
     "welcome": "Welkom bij het Inkoop Management Systeem",
     "subtitle": "Beheer bestellingen en voorraad voor Belgische gevangenissen",
     "stats": {
-      "pendingOrders": "Openstaande bestellingen",
+      "pendingPurchaseOrders": "Openstaande aankooporders",
+      "pendingSalesOrders": "Openstaande verkooporders",
       "suppliers": "Actieve leveranciers",
       "articles": "Artikelen in catalogus",
       "lowStock": "Lage voorraad items"
     },
     "recentOrders": "Recente bestellingen",
+    "orders": {
+      "id": "Order ID",
+      "type": "Type",
+      "party": "Partij",
+      "amount": "Bedrag",
+      "status": "Status",
+      "date": "Datum",
+      "purchase": "Aankoop",
+      "sales": "Verkoop",
+      "statuses": {
+        "pending": "Openstaand",
+        "approved": "Goedgekeurd",
+        "delivered": "Geleverd"
+      }
+    },
     "quickActions": "Snelle acties",
     "newOrder": "Nieuwe bestelling",
     "viewStock": "Bekijk voorraad",
