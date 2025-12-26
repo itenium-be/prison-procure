@@ -32,7 +32,6 @@ export function Header({ onMenuClick }: HeaderProps) {
         <button className={styles.menuButton} onClick={onMenuClick}>
           <Menu size={24} />
         </button>
-        <h1 className={styles.pageTitle}>{t('dashboard.title')}</h1>
       </div>
       <div className={styles.right}>
         <div className={styles.modeToggle}>
