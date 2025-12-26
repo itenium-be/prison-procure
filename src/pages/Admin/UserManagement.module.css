@@ -218,17 +218,22 @@
   color: #c2185b;
 }
 
+.roleCentralUser {
+  background-color: #f3e5f5;
+  color: #7b1fa2;
+}
+
 .roleLocalAdmin {
   background-color: #fff3e0;
   color: #e65100;
 }
 
-.roleUser {
+.roleLocalUser {
   background-color: #e8f5e9;
   color: #2e7d32;
 }
 
-.roleViewer {
+.roleReadonly {
   background-color: #eceff1;
   color: #546e7a;
 }
@@ -353,15 +358,19 @@
   background-color: #c2185b;
 }
 
+.roleIcon.roleCentralUser {
+  background-color: #7b1fa2;
+}
+
 .roleIcon.roleLocalAdmin {
   background-color: #e65100;
 }
 
-.roleIcon.roleUser {
+.roleIcon.roleLocalUser {
   background-color: #2e7d32;
 }
 
-.roleIcon.roleViewer {
+.roleIcon.roleReadonly {
   background-color: #546e7a;
 }
 

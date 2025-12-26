@@ -326,17 +326,23 @@
         "actions": "Aktionen"
       },
       "authLocal": "Lokal",
+      "systems": {
+        "central": "Zentrales System",
+        "local": "Lokales System"
+      },
       "roleNames": {
-        "central_admin": "Zentraladmin",
-        "local_admin": "Lokaladmin",
-        "user": "Benutzer",
-        "viewer": "Betrachter"
+        "central_admin": "Zentraler Administrator",
+        "central_user": "Zentraler Benutzer",
+        "local_admin": "Gefängnisadministrator",
+        "local_user": "Gefängnisbenutzer",
+        "readonly": "Nur-Lesen"
       },
       "roleDesc": {
-        "central_admin": "Vollzugriff auf alle Systeme und Gefängnisse",
+        "central_admin": "Vollzugriff auf das zentrale System",
+        "central_user": "Standardzugriff auf das zentrale System",
         "local_admin": "Verwaltung zugewiesener Gefängnisse",
-        "user": "Tägliche Systemnutzung",
-        "viewer": "Nur-Lese-Zugriff"
+        "local_user": "Tägliche Nutzung im Gefängnis",
+        "readonly": "Nur-Lese-Zugriff"
       },
       "prisonsAssigned": "Gefängnisse",
       "statusActive": "Aktiv",

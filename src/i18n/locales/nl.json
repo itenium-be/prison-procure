@@ -349,17 +349,23 @@
         "actions": "Acties"
       },
       "authLocal": "Lokaal",
+      "systems": {
+        "central": "Centraal Systeem",
+        "local": "Lokaal Systeem"
+      },
       "roleNames": {
-        "central_admin": "Centraal beheerder",
-        "local_admin": "Lokaal beheerder",
-        "user": "Gebruiker",
-        "viewer": "Kijker"
+        "central_admin": "Beheerder centraal",
+        "central_user": "Gebruiker centraal",
+        "local_admin": "Beheerder gevangenis",
+        "local_user": "Gebruiker gevangenis",
+        "readonly": "Read-only"
       },
       "roleDesc": {
-        "central_admin": "Volledige toegang tot alle systemen en gevangenissen",
+        "central_admin": "Volledige toegang tot het centrale systeem",
+        "central_user": "Standaard toegang tot het centrale systeem",
         "local_admin": "Beheer van toegewezen gevangenissen",
-        "user": "Dagelijks gebruik van het systeem",
-        "viewer": "Alleen-lezen toegang"
+        "local_user": "Dagelijks gebruik binnen de gevangenis",
+        "readonly": "Alleen-lezen toegang"
       },
       "prisonsAssigned": "gevangenissen",
       "statusActive": "Actief",

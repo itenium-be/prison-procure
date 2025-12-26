@@ -1,5 +1,7 @@
 export type AuthType = 'o365' | 'local'
-export type SystemRole = 'central_admin' | 'local_admin' | 'user' | 'viewer'
+export type CentralRole = 'central_user' | 'central_admin'
+export type LocalRole = 'local_user' | 'local_admin' | 'readonly'
+export type SystemRole = CentralRole | LocalRole
 
 export interface MenuRight {
   id: string
@@ -49,6 +51,9 @@ export const SYSTEMS = [
   { id: 'local', name: 'Lokaal Systeem' },
 ]
 
+export const CENTRAL_ROLES: CentralRole[] = ['central_user', 'central_admin']
+export const LOCAL_ROLES: LocalRole[] = ['local_user', 'local_admin', 'readonly']
+
 export const DUMMY_USERS: User[] = [
   {
     id: 'user-001',
@@ -59,7 +64,7 @@ export const DUMMY_USERS: User[] = [
     blocked: false,
     roles: [
       { systemId: 'central', systemName: 'Centraal Systeem', role: 'central_admin' },
-      { systemId: 'local', systemName: 'Lokaal Systeem', role: 'central_admin' },
+      { systemId: 'local', systemName: 'Lokaal Systeem', role: 'local_admin' },
     ],
     assignedPrisons: ['antwerpen', 'brugge', 'gent', 'leuven'],
     menuRights: ['dashboard', 'suppliers', 'articles', 'procurement', 'stock', 'admin'],
@@ -74,6 +79,7 @@ export const DUMMY_USERS: User[] = [
     o365Group: 'Prison-Local-Admins',
     blocked: false,
     roles: [
+      { systemId: 'central', systemName: 'Centraal Systeem', role: 'central_user' },
       { systemId: 'local', systemName: 'Lokaal Systeem', role: 'local_admin' },
     ],
     assignedPrisons: ['antwerpen'],
@@ -89,7 +95,7 @@ export const DUMMY_USERS: User[] = [
     o365Group: 'Prison-Procurement-Users',
     blocked: false,
     roles: [
-      { systemId: 'local', systemName: 'Lokaal Systeem', role: 'user' },
+      { systemId: 'local', systemName: 'Lokaal Systeem', role: 'local_user' },
     ],
     assignedPrisons: ['brugge', 'gent'],
     menuRights: ['dashboard', 'suppliers', 'articles', 'procurement'],
@@ -103,7 +109,7 @@ export const DUMMY_USERS: User[] = [
     authType: 'local',
     blocked: false,
     roles: [
-      { systemId: 'local', systemName: 'Lokaal Systeem', role: 'user' },
+      { systemId: 'local', systemName: 'Lokaal Systeem', role: 'local_user' },
     ],
     assignedPrisons: ['leuven'],
     menuRights: ['dashboard', 'stock'],
@@ -118,7 +124,7 @@ export const DUMMY_USERS: User[] = [
     o365Group: 'Prison-Viewers',
     blocked: true,
     roles: [
-      { systemId: 'local', systemName: 'Lokaal Systeem', role: 'viewer' },
+      { systemId: 'local', systemName: 'Lokaal Systeem', role: 'readonly' },
     ],
     assignedPrisons: ['antwerpen', 'brugge'],
     menuRights: ['dashboard'],
@@ -133,7 +139,7 @@ export const DUMMY_USERS: User[] = [
     o365Group: 'Prison-Stock-Users',
     blocked: false,
     roles: [
-      { systemId: 'local', systemName: 'Lokaal Systeem', role: 'user' },
+      { systemId: 'local', systemName: 'Lokaal Systeem', role: 'local_user' },
     ],
     assignedPrisons: ['gent', 'oudenaarde'],
     menuRights: ['dashboard', 'stock', 'articles'],
