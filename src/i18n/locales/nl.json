@@ -10,7 +10,10 @@
   "header": {
     "selectPrison": "Selecteer gevangenis",
     "globalManagement": "Centraal beheer",
-    "selectLanguage": "Taal"
+    "selectLanguage": "Taal",
+    "centralMode": "Centraal",
+    "localMode": "Lokaal",
+    "toggleMode": "Wissel tussen centraal en lokaal beheer"
   },
   "dashboard": {
     "title": "Dashboard",

@@ -16,10 +16,14 @@ interface HeaderProps {
 
 export function Header({ onMenuClick }: HeaderProps) {
   const { t, i18n } = useTranslation()
-  const { selectedPrison, setSelectedPrison, prisons } = usePrison()
+  const { selectedPrison, setSelectedPrison, prisons, mode, setMode } = usePrison()
 
   const handleLanguageChange = (langCode: string) => {
     i18n.changeLanguage(langCode)
+  }
+
+  const handleModeToggle = () => {
+    setMode(mode === 'central' ? 'local' : 'central')
   }
 
   return (
@@ -31,37 +35,47 @@ export function Header({ onMenuClick }: HeaderProps) {
         <h1 className={styles.pageTitle}>{t('dashboard.title')}</h1>
       </div>
       <div className={styles.right}>
-        <div className={styles.selector}>
-          <Building2 size={18} className={styles.selectorIcon} />
-          <select
-            value={selectedPrison?.id || ''}
-            onChange={(e) => {
-              if (e.target.value === '') {
-                setSelectedPrison(null)
-              } else if (e.target.value === 'global') {
-                setSelectedPrison({ id: 'global', nameKey: 'header.globalManagement' })
-              } else {
-                const prison = prisons.find((p) => p.id === e.target.value)
-                setSelectedPrison(prison || null)
-              }
-            }}
-            className={styles.select}
+        <div className={styles.modeToggle}>
+          <span className={`${styles.modeLabel} ${mode === 'central' ? styles.activeMode : ''}`}>
+            {t('header.centralMode')}
+          </span>
+          <button
+            className={styles.toggleSwitch}
+            onClick={handleModeToggle}
+            aria-label={t('header.toggleMode')}
           >
-            <option value="" disabled>
-              {t('header.selectPrison')}
-            </option>
-            <option value="global">
-              {t('header.globalManagement')}
-            </option>
-            <optgroup label="─────────────────">
+            <span className={`${styles.toggleSlider} ${mode === 'local' ? styles.toggleLocal : ''}`} />
+          </button>
+          <span className={`${styles.modeLabel} ${mode === 'local' ? styles.activeMode : ''}`}>
+            {t('header.localMode')}
+          </span>
+        </div>
+        {mode === 'local' && (
+          <div className={styles.selector}>
+            <Building2 size={18} className={styles.selectorIcon} />
+            <select
+              value={selectedPrison?.id || ''}
+              onChange={(e) => {
+                if (e.target.value === '') {
+                  setSelectedPrison(null)
+                } else {
+                  const prison = prisons.find((p) => p.id === e.target.value)
+                  setSelectedPrison(prison || null)
+                }
+              }}
+              className={styles.select}
+            >
+              <option value="" disabled>
+                {t('header.selectPrison')}
+              </option>
               {prisons.map((prison) => (
                 <option key={prison.id} value={prison.id}>
                   {t(prison.nameKey)}
                 </option>
               ))}
-            </optgroup>
-          </select>
-        </div>
+            </select>
+          </div>
+        )}
         <div className={styles.languageSelector}>
           <Globe size={18} className={styles.selectorIcon} />
           <div className={styles.languageButtons}>
