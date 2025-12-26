@@ -110,6 +110,17 @@
   text-decoration: underline;
 }
 
+.link {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.link:hover {
+  color: var(--primary-hover);
+  text-decoration: underline;
+}
+
 .statusBadges {
   display: flex;
   gap: 8px;
@@ -219,5 +230,9 @@
   .statusBadges {
     flex-direction: column;
     gap: 4px;
+  }
+
+  .hideOnMobile {
+    display: none;
   }
 }

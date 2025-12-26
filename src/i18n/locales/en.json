@@ -10,7 +10,10 @@
   "header": {
     "selectPrison": "Select prison",
     "globalManagement": "Global management",
-    "selectLanguage": "Language"
+    "selectLanguage": "Language",
+    "centralMode": "Central",
+    "localMode": "Local",
+    "toggleMode": "Toggle between central and local management"
   },
   "dashboard": {
     "title": "Dashboard",
@@ -82,8 +85,8 @@
     "status": "Status",
     "actions": "Actions",
     "blocked": "Blocked",
-    "activeLocal": "Active",
-    "inactiveLocal": "Inactive",
+    "activeLocal": "Active for prison",
+    "inactiveLocal": "Inactive for prison",
     "block": "Block supplier",
     "unblock": "Unblock supplier",
     "activateLocal": "Activate for this prison",

@@ -82,19 +82,6 @@ export function Articles() {
       sortable: true,
     },
     {
-      key: 'eanCode',
-      header: t('articles.columns.eanCode'),
-      sortable: true,
-      render: (value) => (
-        <span className={styles.eanCell}>{String(value)}</span>
-      ),
-    },
-    {
-      key: 'intrastat',
-      header: t('articles.columns.intrastat'),
-      sortable: true,
-    },
-    {
       key: 'blocked',
       header: t('articles.columns.blocked'),
       sortable: true,
@@ -127,9 +114,9 @@ export function Articles() {
   return (
     <div className={styles.page}>
       <div className={styles.header}>
-        <div>
+        <div className={styles.headerLeft}>
           <h1>{t('articles.title')}</h1>
-          <p>{t('articles.description')}</p>
+          <p className={styles.subtitle}>{t('articles.description')}</p>
         </div>
         <button className={styles.addButton} onClick={handleAddNew}>
           <Plus size={20} />

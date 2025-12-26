@@ -10,7 +10,10 @@
   "header": {
     "selectPrison": "Sélectionner la prison",
     "globalManagement": "Gestion centrale",
-    "selectLanguage": "Langue"
+    "selectLanguage": "Langue",
+    "centralMode": "Central",
+    "localMode": "Local",
+    "toggleMode": "Basculer entre gestion centrale et locale"
   },
   "dashboard": {
     "title": "Tableau de bord",
@@ -82,8 +85,8 @@
     "status": "Statut",
     "actions": "Actions",
     "blocked": "Bloqué",
-    "activeLocal": "Actif",
-    "inactiveLocal": "Inactif",
+    "activeLocal": "Actif pour la prison",
+    "inactiveLocal": "Inactif pour la prison",
     "block": "Bloquer le fournisseur",
     "unblock": "Débloquer le fournisseur",
     "activateLocal": "Activer pour cette prison",

@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useNavigate, useParams } from 'react-router-dom'
-import { ArrowLeft, Building2, CreditCard, Truck } from 'lucide-react'
+import { ArrowLeft, Building2, CreditCard, Truck, Phone, Mail } from 'lucide-react'
 import styles from './SupplierDetail.module.css'
 
 type TabType = 'general' | 'financial' | 'logistics'
@@ -232,24 +232,38 @@ export function SupplierDetail() {
 
               <div className={styles.fieldGroup}>
                 <label className={styles.label}>{t('suppliers.fields.phone')}</label>
-                <input
-                  type="tel"
-                  className={styles.input}
-                  value={formData.phone}
-                  onChange={e => handleChange('phone', e.target.value)}
-                  placeholder={t('suppliers.fields.phonePlaceholder')}
-                />
+                <div className={styles.inputWithIcon}>
+                  <input
+                    type="tel"
+                    className={styles.input}
+                    value={formData.phone}
+                    onChange={e => handleChange('phone', e.target.value)}
+                    placeholder={t('suppliers.fields.phonePlaceholder')}
+                  />
+                  {formData.phone && (
+                    <a href={`tel:${formData.phone}`} className={styles.iconButton} title={t('suppliers.fields.callPhone')}>
+                      <Phone size={18} />
+                    </a>
+                  )}
+                </div>
               </div>
 
               <div className={styles.fieldGroup}>
                 <label className={styles.label}>{t('suppliers.fields.email')}</label>
-                <input
-                  type="email"
-                  className={styles.input}
-                  value={formData.email}
-                  onChange={e => handleChange('email', e.target.value)}
-                  placeholder={t('suppliers.fields.emailPlaceholder')}
-                />
+                <div className={styles.inputWithIcon}>
+                  <input
+                    type="email"
+                    className={styles.input}
+                    value={formData.email}
+                    onChange={e => handleChange('email', e.target.value)}
+                    placeholder={t('suppliers.fields.emailPlaceholder')}
+                  />
+                  {formData.email && (
+                    <a href={`mailto:${formData.email}`} className={styles.iconButton} title={t('suppliers.fields.sendEmail')}>
+                      <Mail size={18} />
+                    </a>
+                  )}
+                </div>
               </div>
 
               <div className={styles.fieldGroup}>
@@ -364,24 +378,38 @@ export function SupplierDetail() {
 
               <div className={styles.fieldGroup}>
                 <label className={styles.label}>{t('suppliers.fields.contactPhone')}</label>
-                <input
-                  type="tel"
-                  className={styles.input}
-                  value={formData.contactPhone}
-                  onChange={e => handleChange('contactPhone', e.target.value)}
-                  placeholder={t('suppliers.fields.contactPhonePlaceholder')}
-                />
+                <div className={styles.inputWithIcon}>
+                  <input
+                    type="tel"
+                    className={styles.input}
+                    value={formData.contactPhone}
+                    onChange={e => handleChange('contactPhone', e.target.value)}
+                    placeholder={t('suppliers.fields.contactPhonePlaceholder')}
+                  />
+                  {formData.contactPhone && (
+                    <a href={`tel:${formData.contactPhone}`} className={styles.iconButton} title={t('suppliers.fields.callPhone')}>
+                      <Phone size={18} />
+                    </a>
+                  )}
+                </div>
               </div>
 
               <div className={styles.fieldGroup}>
                 <label className={styles.label}>{t('suppliers.fields.contactEmail')}</label>
-                <input
-                  type="email"
-                  className={styles.input}
-                  value={formData.contactEmail}
-                  onChange={e => handleChange('contactEmail', e.target.value)}
-                  placeholder={t('suppliers.fields.contactEmailPlaceholder')}
-                />
+                <div className={styles.inputWithIcon}>
+                  <input
+                    type="email"
+                    className={styles.input}
+                    value={formData.contactEmail}
+                    onChange={e => handleChange('contactEmail', e.target.value)}
+                    placeholder={t('suppliers.fields.contactEmailPlaceholder')}
+                  />
+                  {formData.contactEmail && (
+                    <a href={`mailto:${formData.contactEmail}`} className={styles.iconButton} title={t('suppliers.fields.sendEmail')}>
+                      <Mail size={18} />
+                    </a>
+                  )}
+                </div>
               </div>
 
               <div className={styles.fieldGroupFull}>

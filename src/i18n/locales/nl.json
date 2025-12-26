@@ -11,7 +11,10 @@
   "header": {
     "selectPrison": "Selecteer gevangenis",
     "globalManagement": "Centraal beheer",
-    "selectLanguage": "Taal"
+    "selectLanguage": "Taal",
+    "centralMode": "Centraal",
+    "localMode": "Lokaal",
+    "toggleMode": "Wissel tussen centraal en lokaal beheer"
   },
   "dashboard": {
     "title": "Dashboard",
@@ -103,8 +106,8 @@
     "status": "Status",
     "actions": "Acties",
     "blocked": "Geblokkeerd",
-    "activeLocal": "Actief",
-    "inactiveLocal": "Inactief",
+    "activeLocal": "Actief voor gevangenis",
+    "inactiveLocal": "Inactief voor gevangenis",
     "block": "Leverancier blokkeren",
     "unblock": "Leverancier deblokkeren",
     "activateLocal": "Activeren voor deze gevangenis",
