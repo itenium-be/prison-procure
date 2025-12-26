@@ -6,7 +6,9 @@
     "procurement": "Inkoopbeheer",
     "sales": "Verkoopbeheer",
     "stock": "Voorraad",
-    "admin": "Beheer"
+    "admin": "Beheer",
+    "collapse": "Inklappen",
+    "expand": "Uitklappen"
   },
   "header": {
     "selectPrison": "Selecteer gevangenis",
