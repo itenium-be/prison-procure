@@ -14,7 +14,7 @@ import {
   Check,
   Users
 } from 'lucide-react'
-import { DUMMY_USERS, User, O365_GROUPS, SYSTEMS, MENU_RIGHTS, SystemRole, CENTRAL_ROLES, LOCAL_ROLES } from '../../data/users'
+import { DUMMY_USERS, User, O365_GROUPS, MENU_RIGHTS, SystemRole, CENTRAL_ROLES, LOCAL_ROLES } from '../../data/users'
 import { BELGIAN_PRISONS } from '../../context/PrisonContext'
 import styles from './UserManagement.module.css'
 
