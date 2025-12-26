@@ -127,9 +127,9 @@ export function Articles() {
   return (
     <div className={styles.page}>
       <div className={styles.header}>
-        <div>
+        <div className={styles.headerLeft}>
           <h1>{t('articles.title')}</h1>
-          <p>{t('articles.description')}</p>
+          <p className={styles.subtitle}>{t('articles.description')}</p>
         </div>
         <button className={styles.addButton} onClick={handleAddNew}>
           <Plus size={20} />
