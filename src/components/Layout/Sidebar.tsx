@@ -5,6 +5,7 @@ import {
   Truck,
   Package,
   ShoppingCart,
+  ArrowUpCircle,
   Warehouse,
   Settings,
 } from 'lucide-react'
@@ -15,6 +16,7 @@ const navItems = [
   { path: '/suppliers', icon: Truck, labelKey: 'nav.suppliers' },
   { path: '/articles', icon: Package, labelKey: 'nav.articles' },
   { path: '/procurement', icon: ShoppingCart, labelKey: 'nav.procurement' },
+  { path: '/sales', icon: ArrowUpCircle, labelKey: 'nav.sales' },
   { path: '/stock', icon: Warehouse, labelKey: 'nav.stock' },
   { path: '/admin', icon: Settings, labelKey: 'nav.admin' },
 ]

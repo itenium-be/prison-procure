@@ -4,6 +4,7 @@
     "suppliers": "Leveranciers",
     "articles": "Artikelen",
     "procurement": "Inkoopbeheer",
+    "sales": "Verkoopbeheer",
     "stock": "Voorraad",
     "admin": "Beheer"
   },
@@ -81,6 +82,10 @@
     "procurement": {
       "title": "Inkoopbeheer",
       "description": "Beheer bestellingen en inkooporders"
+    },
+    "sales": {
+      "title": "Verkoopbeheer",
+      "description": "Beheer verkooporders naar andere gevangenissen"
     },
     "stock": {
       "title": "Voorraad",

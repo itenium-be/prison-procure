@@ -5,6 +5,7 @@ import { Dashboard } from './pages/Dashboard'
 import { Suppliers, SupplierDetail } from './pages/Suppliers'
 import { Articles, ArticleDetail } from './pages/Articles'
 import { Procurement } from './pages/Procurement'
+import { Sales } from './pages/Sales'
 import { Stock } from './pages/Stock'
 import { Admin, UserManagement } from './pages/Admin'
 import { Prisons, PrisonDetail } from './pages/Prisons'
@@ -20,6 +21,7 @@ function App() {
           <Route path="articles" element={<Articles />} />
           <Route path="articles/:id" element={<ArticleDetail />} />
           <Route path="procurement" element={<Procurement />} />
+          <Route path="sales" element={<Sales />} />
           <Route path="stock" element={<Stock />} />
           <Route path="admin" element={<Admin />} />
           <Route path="admin/users" element={<UserManagement />} />
