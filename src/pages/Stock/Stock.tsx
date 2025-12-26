@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next'
 import { Warehouse, Package, Plus, TrendingUp, TrendingDown, AlertTriangle, Pencil, Trash2 } from 'lucide-react'
 import { usePrison } from '../../context/PrisonContext'
 import { DUMMY_WAREHOUSES, DUMMY_ARTICLE_STOCKS, ArticleStock } from '../../data/stock'
+import { StockChart } from '../../components/StockChart'
 import styles from './Stock.module.css'
 
 type TabType = 'warehouses' | 'timeline'
@@ -130,14 +131,7 @@ export function Stock() {
             </div>
           </div>
 
-          <div className={styles.stockForecast}>
-            <h3>{t('stock.timeline.forecast')}</h3>
-            <p className={styles.forecastText}>
-              {selectedArticle.currentStock < selectedArticle.minStock
-                ? t('stock.timeline.forecastLow')
-                : t('stock.timeline.forecastOk', { days: Math.floor(selectedArticle.currentStock / 5) })}
-            </p>
-          </div>
+          <StockChart article={selectedArticle} dateRange={dateRange} />
 
           <div className={styles.movementsTable}>
             <table>

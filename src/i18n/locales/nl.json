@@ -284,6 +284,14 @@
     "de": "Duits",
     "en": "Engels"
   },
+  "stockChart": {
+    "title": "Voorraadverloop",
+    "actualStock": "Werkelijke voorraad",
+    "forecast": "Voorspelling",
+    "minStock": "Minimumvoorraad",
+    "belowMinWarning": "Voorraad daalt onder minimum op {{date}} (over {{days}} dagen).",
+    "depletionWarning": "Voorraad is op rond {{date}} (over {{days}} dagen)."
+  },
   "stock": {
     "title": "Voorraad",
     "description": "Beheer magazijnen en voorraadniveaus",
