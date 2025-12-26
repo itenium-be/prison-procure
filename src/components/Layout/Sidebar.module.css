@@ -94,6 +94,12 @@
   color: var(--sidebar-text);
 }
 
+.versionLabel {
+  font-size: 0.75rem;
+  opacity: 0.5;
+  font-weight: 400;
+}
+
 .sidebar.collapsed .collapseButton {
   justify-content: center;
 }

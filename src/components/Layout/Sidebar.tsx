@@ -76,7 +76,7 @@ export function Sidebar({ isOpen, isCollapsed, onClose, onToggleCollapse }: Side
           title={isCollapsed ? t('nav.expand') : t('nav.collapse')}
         >
           {isCollapsed ? <ChevronsRight size={20} /> : <ChevronsLeft size={20} />}
-          {!isCollapsed && <span>{t('nav.collapse')}</span>}
+          {!isCollapsed && <span className={styles.versionLabel}>POC v0.2</span>}
         </button>
       </div>
     </aside>
