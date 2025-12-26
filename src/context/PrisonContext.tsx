@@ -5,6 +5,8 @@ export interface Prison {
   nameKey: string
 }
 
+export type AppMode = 'central' | 'local'
+
 export const BELGIAN_PRISONS: Prison[] = [
   { id: 'antwerpen', nameKey: 'prisons.antwerpen' },
   { id: 'brugge', nameKey: 'prisons.brugge' },
@@ -35,15 +37,18 @@ interface PrisonContextType {
   selectedPrison: Prison | null
   setSelectedPrison: (prison: Prison | null) => void
   prisons: Prison[]
+  mode: AppMode
+  setMode: (mode: AppMode) => void
 }
 
 const PrisonContext = createContext<PrisonContextType | undefined>(undefined)
 
 export function PrisonProvider({ children }: { children: ReactNode }) {
   const [selectedPrison, setSelectedPrison] = useState<Prison | null>(BELGIAN_PRISONS[0])
+  const [mode, setMode] = useState<AppMode>('central')
 
   return (
-    <PrisonContext.Provider value={{ selectedPrison, setSelectedPrison, prisons: BELGIAN_PRISONS }}>
+    <PrisonContext.Provider value={{ selectedPrison, setSelectedPrison, prisons: BELGIAN_PRISONS, mode, setMode }}>
       {children}
     </PrisonContext.Provider>
   )

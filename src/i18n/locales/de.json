@@ -10,7 +10,10 @@
   "header": {
     "selectPrison": "Gefängnis auswählen",
     "globalManagement": "Zentrale Verwaltung",
-    "selectLanguage": "Sprache"
+    "selectLanguage": "Sprache",
+    "centralMode": "Zentral",
+    "localMode": "Lokal",
+    "toggleMode": "Zwischen zentraler und lokaler Verwaltung wechseln"
   },
   "dashboard": {
     "title": "Dashboard",

@@ -10,7 +10,10 @@
   "header": {
     "selectPrison": "Select prison",
     "globalManagement": "Global management",
-    "selectLanguage": "Language"
+    "selectLanguage": "Language",
+    "centralMode": "Central",
+    "localMode": "Local",
+    "toggleMode": "Toggle between central and local management"
   },
   "dashboard": {
     "title": "Dashboard",

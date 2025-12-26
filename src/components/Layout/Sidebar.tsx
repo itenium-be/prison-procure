@@ -8,15 +8,23 @@ import {
   Warehouse,
   Settings,
 } from 'lucide-react'
+import { usePrison, AppMode } from '../../context/PrisonContext'
 import styles from './Sidebar.module.css'
 
-const navItems = [
-  { path: '/', icon: LayoutDashboard, labelKey: 'nav.dashboard' },
-  { path: '/suppliers', icon: Truck, labelKey: 'nav.suppliers' },
-  { path: '/articles', icon: Package, labelKey: 'nav.articles' },
-  { path: '/procurement', icon: ShoppingCart, labelKey: 'nav.procurement' },
-  { path: '/stock', icon: Warehouse, labelKey: 'nav.stock' },
-  { path: '/admin', icon: Settings, labelKey: 'nav.admin' },
+interface NavItem {
+  path: string
+  icon: typeof LayoutDashboard
+  labelKey: string
+  modes: AppMode[]
+}
+
+const navItems: NavItem[] = [
+  { path: '/', icon: LayoutDashboard, labelKey: 'nav.dashboard', modes: ['central', 'local'] },
+  { path: '/suppliers', icon: Truck, labelKey: 'nav.suppliers', modes: ['central', 'local'] },
+  { path: '/articles', icon: Package, labelKey: 'nav.articles', modes: ['central', 'local'] },
+  { path: '/procurement', icon: ShoppingCart, labelKey: 'nav.procurement', modes: ['local'] },
+  { path: '/stock', icon: Warehouse, labelKey: 'nav.stock', modes: ['local'] },
+  { path: '/admin', icon: Settings, labelKey: 'nav.admin', modes: ['central'] },
 ]
 
 interface SidebarProps {
@@ -26,6 +34,9 @@ interface SidebarProps {
 
 export function Sidebar({ isOpen, onClose }: SidebarProps) {
   const { t } = useTranslation()
+  const { mode } = usePrison()
+
+  const filteredNavItems = navItems.filter((item) => item.modes.includes(mode))
 
   return (
     <aside className={`${styles.sidebar} ${isOpen ? styles.open : ''}`}>
@@ -36,7 +47,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
         <span className={styles.logoText}>PrisonProcure</span>
       </div>
       <nav className={styles.nav}>
-        {navItems.map((item) => (
+        {filteredNavItems.map((item) => (
           <NavLink
             key={item.path}
             to={item.path}
