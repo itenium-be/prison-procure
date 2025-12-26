@@ -1,29 +1,32 @@
 import { useTranslation } from 'react-i18next'
 import {
-  ShoppingCart,
   Truck,
   Package,
   AlertTriangle,
   Plus,
   Eye,
   Users,
+  ArrowDownCircle,
+  ArrowUpCircle,
 } from 'lucide-react'
 import { usePrison } from '../../context/PrisonContext'
 import styles from './Dashboard.module.css'
 
 const DUMMY_STATS = {
-  pendingOrders: 12,
+  pendingPurchaseOrders: 8,
+  pendingSalesOrders: 5,
   suppliers: 45,
   articles: 1234,
   lowStock: 8,
 }
 
 const DUMMY_RECENT_ORDERS = [
-  { id: 'PO-2024-001', supplier: 'Colruyt Group', amount: '€ 2,450.00', status: 'pending', date: '2024-01-15' },
-  { id: 'PO-2024-002', supplier: 'Delhaize', amount: '€ 1,875.50', status: 'approved', date: '2024-01-14' },
-  { id: 'PO-2024-003', supplier: 'Metro Cash & Carry', amount: '€ 3,200.00', status: 'delivered', date: '2024-01-13' },
-  { id: 'PO-2024-004', supplier: 'Makro', amount: '€ 890.25', status: 'pending', date: '2024-01-12' },
-  { id: 'PO-2024-005', supplier: 'Sligro', amount: '€ 1,560.75', status: 'approved', date: '2024-01-11' },
+  { id: 'PO-2024-001', type: 'purchase', party: 'Colruyt Group', amount: '€ 2,450.00', status: 'pending', date: '2024-01-15' },
+  { id: 'SO-2024-001', type: 'sales', party: 'Gevangenis Brugge', amount: '€ 1,200.00', status: 'pending', date: '2024-01-15' },
+  { id: 'PO-2024-002', type: 'purchase', party: 'Delhaize', amount: '€ 1,875.50', status: 'approved', date: '2024-01-14' },
+  { id: 'SO-2024-002', type: 'sales', party: 'Gevangenis Gent', amount: '€ 890.00', status: 'delivered', date: '2024-01-14' },
+  { id: 'PO-2024-003', type: 'purchase', party: 'Metro Cash & Carry', amount: '€ 3,200.00', status: 'delivered', date: '2024-01-13' },
+  { id: 'SO-2024-003', type: 'sales', party: 'Gevangenis Leuven Centraal', amount: '€ 2,100.00', status: 'approved', date: '2024-01-13' },
 ]
 
 export function Dashboard() {
@@ -44,18 +47,28 @@ export function Dashboard() {
 
       <div className={styles.statsGrid}>
         <div className={styles.statCard}>
-          <div className={styles.statIcon} style={{ backgroundColor: '#fef3c7' }}>
-            <ShoppingCart size={24} color="#f59e0b" />
+          <div className={styles.statIcon} style={{ backgroundColor: '#dbeafe' }}>
+            <ArrowDownCircle size={24} color="#3b82f6" />
           </div>
           <div className={styles.statInfo}>
-            <span className={styles.statValue}>{DUMMY_STATS.pendingOrders}</span>
-            <span className={styles.statLabel}>{t('dashboard.stats.pendingOrders')}</span>
+            <span className={styles.statValue}>{DUMMY_STATS.pendingPurchaseOrders}</span>
+            <span className={styles.statLabel}>{t('dashboard.stats.pendingPurchaseOrders')}</span>
           </div>
         </div>
 
         <div className={styles.statCard}>
-          <div className={styles.statIcon} style={{ backgroundColor: '#dbeafe' }}>
-            <Truck size={24} color="#3b82f6" />
+          <div className={styles.statIcon} style={{ backgroundColor: '#fef3c7' }}>
+            <ArrowUpCircle size={24} color="#f59e0b" />
+          </div>
+          <div className={styles.statInfo}>
+            <span className={styles.statValue}>{DUMMY_STATS.pendingSalesOrders}</span>
+            <span className={styles.statLabel}>{t('dashboard.stats.pendingSalesOrders')}</span>
+          </div>
+        </div>
+
+        <div className={styles.statCard}>
+          <div className={styles.statIcon} style={{ backgroundColor: '#e0e7ff' }}>
+            <Truck size={24} color="#6366f1" />
           </div>
           <div className={styles.statInfo}>
             <span className={styles.statValue}>{DUMMY_STATS.suppliers}</span>
@@ -91,22 +104,28 @@ export function Dashboard() {
             <table>
               <thead>
                 <tr>
-                  <th>Order ID</th>
-                  <th>Supplier</th>
-                  <th>Amount</th>
-                  <th>Status</th>
-                  <th>Date</th>
+                  <th>{t('dashboard.orders.id')}</th>
+                  <th>{t('dashboard.orders.type')}</th>
+                  <th>{t('dashboard.orders.party')}</th>
+                  <th>{t('dashboard.orders.amount')}</th>
+                  <th>{t('dashboard.orders.status')}</th>
+                  <th>{t('dashboard.orders.date')}</th>
                 </tr>
               </thead>
               <tbody>
                 {DUMMY_RECENT_ORDERS.map((order) => (
                   <tr key={order.id}>
                     <td>{order.id}</td>
-                    <td>{order.supplier}</td>
+                    <td>
+                      <span className={`${styles.orderType} ${styles[order.type]}`}>
+                        {t(`dashboard.orders.${order.type}`)}
+                      </span>
+                    </td>
+                    <td>{order.party}</td>
                     <td>{order.amount}</td>
                     <td>
                       <span className={`${styles.status} ${styles[order.status]}`}>
-                        {order.status}
+                        {t(`dashboard.orders.statuses.${order.status}`)}
                       </span>
                     </td>
                     <td>{order.date}</td>

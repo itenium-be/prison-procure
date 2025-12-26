@@ -30,7 +30,7 @@
 
 .statsGrid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 16px;
 }
 
@@ -124,12 +124,12 @@
   background-color: var(--background-color);
 }
 
-.status {
+.status,
+.orderType {
   padding: 4px 8px;
   border-radius: 4px;
   font-size: 0.75rem;
   font-weight: 600;
-  text-transform: capitalize;
 }
 
 .status.pending {
@@ -145,6 +145,16 @@
 .status.delivered {
   background-color: #d1fae5;
   color: #065f46;
+}
+
+.orderType.purchase {
+  background-color: #dbeafe;
+  color: #1e40af;
+}
+
+.orderType.sales {
+  background-color: #fce7f3;
+  color: #9d174d;
 }
 
 .actionButtons {
@@ -170,6 +180,12 @@
   background-color: var(--primary-color);
   color: white;
   border-color: var(--primary-color);
+}
+
+@media (max-width: 1400px) {
+  .statsGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 @media (max-width: 1200px) {
