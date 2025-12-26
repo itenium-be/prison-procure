@@ -14,7 +14,7 @@ import {
   Check,
   Users
 } from 'lucide-react'
-import { DUMMY_USERS, User, O365_GROUPS, SYSTEMS, MENU_RIGHTS, SystemRole } from '../../data/users'
+import { DUMMY_USERS, User, O365_GROUPS, SYSTEMS, MENU_RIGHTS, SystemRole, CENTRAL_ROLES, LOCAL_ROLES } from '../../data/users'
 import { BELGIAN_PRISONS } from '../../context/PrisonContext'
 import styles from './UserManagement.module.css'
 
@@ -42,9 +42,10 @@ export function UserManagement() {
   const getRoleBadgeClass = (role: SystemRole) => {
     switch (role) {
       case 'central_admin': return styles.roleCentralAdmin
+      case 'central_user': return styles.roleCentralUser
       case 'local_admin': return styles.roleLocalAdmin
-      case 'user': return styles.roleUser
-      case 'viewer': return styles.roleViewer
+      case 'local_user': return styles.roleLocalUser
+      case 'readonly': return styles.roleReadonly
       default: return ''
     }
   }
@@ -152,52 +153,70 @@ export function UserManagement() {
   const renderRolesTab = () => (
     <div className={styles.rolesSection}>
       <div className={styles.rolesGrid}>
-        {SYSTEMS.map(system => (
-          <div key={system.id} className={styles.systemCard}>
-            <div className={styles.systemHeader}>
-              <Shield size={24} />
-              <h3>{system.name}</h3>
+        {/* Centraal Systeem */}
+        <div className={styles.systemCard}>
+          <div className={styles.systemHeader}>
+            <Shield size={24} />
+            <h3>{t('admin.users.systems.central')}</h3>
+          </div>
+          <div className={styles.rolesList}>
+            <div className={styles.roleItem}>
+              <div className={`${styles.roleIcon} ${styles.roleCentralUser}`}>
+                <Users size={16} />
+              </div>
+              <div className={styles.roleInfo}>
+                <span className={styles.roleName}>{t('admin.users.roleNames.central_user')}</span>
+                <span className={styles.roleDesc}>{t('admin.users.roleDesc.central_user')}</span>
+              </div>
             </div>
-            <div className={styles.rolesList}>
-              <div className={styles.roleItem}>
-                <div className={`${styles.roleIcon} ${styles.roleCentralAdmin}`}>
-                  <Shield size={16} />
-                </div>
-                <div className={styles.roleInfo}>
-                  <span className={styles.roleName}>{t('admin.users.roleNames.central_admin')}</span>
-                  <span className={styles.roleDesc}>{t('admin.users.roleDesc.central_admin')}</span>
-                </div>
+            <div className={styles.roleItem}>
+              <div className={`${styles.roleIcon} ${styles.roleCentralAdmin}`}>
+                <Shield size={16} />
               </div>
-              <div className={styles.roleItem}>
-                <div className={`${styles.roleIcon} ${styles.roleLocalAdmin}`}>
-                  <Shield size={16} />
-                </div>
-                <div className={styles.roleInfo}>
-                  <span className={styles.roleName}>{t('admin.users.roleNames.local_admin')}</span>
-                  <span className={styles.roleDesc}>{t('admin.users.roleDesc.local_admin')}</span>
-                </div>
-              </div>
-              <div className={styles.roleItem}>
-                <div className={`${styles.roleIcon} ${styles.roleUser}`}>
-                  <Users size={16} />
-                </div>
-                <div className={styles.roleInfo}>
-                  <span className={styles.roleName}>{t('admin.users.roleNames.user')}</span>
-                  <span className={styles.roleDesc}>{t('admin.users.roleDesc.user')}</span>
-                </div>
-              </div>
-              <div className={styles.roleItem}>
-                <div className={`${styles.roleIcon} ${styles.roleViewer}`}>
-                  <Users size={16} />
-                </div>
-                <div className={styles.roleInfo}>
-                  <span className={styles.roleName}>{t('admin.users.roleNames.viewer')}</span>
-                  <span className={styles.roleDesc}>{t('admin.users.roleDesc.viewer')}</span>
-                </div>
+              <div className={styles.roleInfo}>
+                <span className={styles.roleName}>{t('admin.users.roleNames.central_admin')}</span>
+                <span className={styles.roleDesc}>{t('admin.users.roleDesc.central_admin')}</span>
               </div>
             </div>
           </div>
-        ))}
+        </div>
+
+        {/* Lokaal Systeem */}
+        <div className={styles.systemCard}>
+          <div className={styles.systemHeader}>
+            <Shield size={24} />
+            <h3>{t('admin.users.systems.local')}</h3>
+          </div>
+          <div className={styles.rolesList}>
+            <div className={styles.roleItem}>
+              <div className={`${styles.roleIcon} ${styles.roleLocalUser}`}>
+                <Users size={16} />
+              </div>
+              <div className={styles.roleInfo}>
+                <span className={styles.roleName}>{t('admin.users.roleNames.local_user')}</span>
+                <span className={styles.roleDesc}>{t('admin.users.roleDesc.local_user')}</span>
+              </div>
+            </div>
+            <div className={styles.roleItem}>
+              <div className={`${styles.roleIcon} ${styles.roleLocalAdmin}`}>
+                <Shield size={16} />
+              </div>
+              <div className={styles.roleInfo}>
+                <span className={styles.roleName}>{t('admin.users.roleNames.local_admin')}</span>
+                <span className={styles.roleDesc}>{t('admin.users.roleDesc.local_admin')}</span>
+              </div>
+            </div>
+            <div className={styles.roleItem}>
+              <div className={`${styles.roleIcon} ${styles.roleReadonly}`}>
+                <Users size={16} />
+              </div>
+              <div className={styles.roleInfo}>
+                <span className={styles.roleName}>{t('admin.users.roleNames.readonly')}</span>
+                <span className={styles.roleDesc}>{t('admin.users.roleDesc.readonly')}</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div className={styles.menuRightsSection}>
@@ -301,18 +320,24 @@ export function UserManagement() {
             <div className={styles.formSection}>
               <h3>{t('admin.users.roleAssignment')}</h3>
               <div className={styles.rolesAssignment}>
-                {SYSTEMS.map(system => (
-                  <div key={system.id} className={styles.systemRoleRow}>
-                    <span className={styles.systemLabel}>{system.name}</span>
-                    <select defaultValue={selectedUser?.roles.find(r => r.systemId === system.id)?.role || ''}>
-                      <option value="">{t('admin.users.noRole')}</option>
-                      <option value="central_admin">{t('admin.users.roleNames.central_admin')}</option>
-                      <option value="local_admin">{t('admin.users.roleNames.local_admin')}</option>
-                      <option value="user">{t('admin.users.roleNames.user')}</option>
-                      <option value="viewer">{t('admin.users.roleNames.viewer')}</option>
-                    </select>
-                  </div>
-                ))}
+                <div className={styles.systemRoleRow}>
+                  <span className={styles.systemLabel}>{t('admin.users.systems.central')}</span>
+                  <select defaultValue={selectedUser?.roles.find(r => r.systemId === 'central')?.role || ''}>
+                    <option value="">{t('admin.users.noRole')}</option>
+                    {CENTRAL_ROLES.map(role => (
+                      <option key={role} value={role}>{t(`admin.users.roleNames.${role}`)}</option>
+                    ))}
+                  </select>
+                </div>
+                <div className={styles.systemRoleRow}>
+                  <span className={styles.systemLabel}>{t('admin.users.systems.local')}</span>
+                  <select defaultValue={selectedUser?.roles.find(r => r.systemId === 'local')?.role || ''}>
+                    <option value="">{t('admin.users.noRole')}</option>
+                    {LOCAL_ROLES.map(role => (
+                      <option key={role} value={role}>{t(`admin.users.roleNames.${role}`)}</option>
+                    ))}
+                  </select>
+                </div>
               </div>
             </div>
 

@@ -326,17 +326,23 @@
         "actions": "Actions"
       },
       "authLocal": "Local",
+      "systems": {
+        "central": "Système Central",
+        "local": "Système Local"
+      },
       "roleNames": {
-        "central_admin": "Admin central",
-        "local_admin": "Admin local",
-        "user": "Utilisateur",
-        "viewer": "Observateur"
+        "central_admin": "Administrateur central",
+        "central_user": "Utilisateur central",
+        "local_admin": "Administrateur prison",
+        "local_user": "Utilisateur prison",
+        "readonly": "Lecture seule"
       },
       "roleDesc": {
-        "central_admin": "Accès complet à tous les systèmes et prisons",
+        "central_admin": "Accès complet au système central",
+        "central_user": "Accès standard au système central",
         "local_admin": "Gestion des prisons assignées",
-        "user": "Utilisation quotidienne du système",
-        "viewer": "Accès en lecture seule"
+        "local_user": "Utilisation quotidienne dans la prison",
+        "readonly": "Accès en lecture seule"
       },
       "prisonsAssigned": "prisons",
       "statusActive": "Actif",
