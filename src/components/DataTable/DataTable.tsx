@@ -9,6 +9,7 @@ export interface Column<T> {
   filterable?: boolean
   render?: (value: T[keyof T], row: T) => React.ReactNode
   filterOptions?: { value: string; label: string }[]
+  className?: string
 }
 
 interface DataTableProps<T> {
@@ -171,7 +172,7 @@ export function DataTable<T extends object>({
                 <th
                   key={String(col.key)}
                   onClick={() => col.sortable && handleSort(col.key)}
-                  className={col.sortable ? styles.sortable : ''}
+                  className={`${col.sortable ? styles.sortable : ''} ${col.className || ''}`}
                 >
                   <div className={styles.headerCell}>
                     <span>{col.header}</span>
@@ -192,7 +193,7 @@ export function DataTable<T extends object>({
               filteredAndSortedData.map((row) => (
                 <tr key={String(row[keyField])}>
                   {columns.map((col) => (
-                    <td key={String(col.key)}>
+                    <td key={String(col.key)} className={col.className}>
                       {col.render
                         ? col.render(row[col.key], row)
                         : String(row[col.key])}

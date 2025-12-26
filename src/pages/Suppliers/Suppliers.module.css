@@ -205,6 +205,10 @@
     display: block;
     overflow-x: auto;
   }
+
+  .hideOnMobile {
+    display: none;
+  }
 }
 
 @media (max-width: 768px) {
@@ -230,9 +234,5 @@
   .statusBadges {
     flex-direction: column;
     gap: 4px;
-  }
-
-  .hideOnMobile {
-    display: none;
   }
 }

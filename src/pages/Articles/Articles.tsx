@@ -60,6 +60,7 @@ export function Articles() {
       key: 'packaging',
       header: t('articles.columns.packaging'),
       sortable: true,
+      className: styles.hideOnMobile,
     },
     {
       key: 'unit',
@@ -70,6 +71,7 @@ export function Articles() {
         { value: 'st', label: t('articles.units.piece') },
         { value: 'kg', label: t('articles.units.kg') },
       ],
+      className: styles.hideOnMobile,
       render: (value) => (
         <span className={styles.unitBadge}>
           {value === 'st' ? t('articles.units.piece') : t('articles.units.kg')}
@@ -80,6 +82,7 @@ export function Articles() {
       key: 'brand',
       header: t('articles.columns.brand'),
       sortable: true,
+      className: styles.hideOnMobile,
     },
     {
       key: 'blocked',
