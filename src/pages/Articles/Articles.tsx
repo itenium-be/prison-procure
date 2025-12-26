@@ -18,10 +18,34 @@ export function Articles() {
   }
 
   const columns: Column<Article>[] = [
+    // Combined column for small devices: code + description + blocked
+    {
+      key: 'code',
+      header: t('articles.columns.description'),
+      className: styles.showOnSmall,
+      render: (_, row) => (
+        <div className={styles.combinedCell}>
+          <button
+            className={styles.codeLink}
+            onClick={() => handleEdit(String(row.id))}
+          >
+            {row.code}
+          </button>
+          <span className={styles.combinedDescription}>{row.description}</span>
+          {row.blocked && (
+            <span className={styles.combinedBadge}>
+              {t('suppliers.blocked')}
+            </span>
+          )}
+        </div>
+      ),
+    },
+    // Regular code column (hidden on small)
     {
       key: 'code',
       header: t('articles.columns.code'),
       sortable: true,
+      className: styles.hideOnSmall,
       render: (value, row) => (
         <button
           className={styles.codeLink}
@@ -31,16 +55,20 @@ export function Articles() {
         </button>
       ),
     },
+    // Regular description column (hidden on small)
     {
       key: 'description',
       header: t('articles.columns.description'),
       sortable: true,
+      className: styles.hideOnSmall,
     },
+    // Regular group column (hidden on medium and smaller)
     {
       key: 'group',
       header: t('articles.columns.group'),
       sortable: true,
       filterable: true,
+      className: styles.hideOnMedium,
       filterOptions: [
         { value: 'food', label: t('articles.groups.food') },
         { value: 'beverages', label: t('articles.groups.beverages') },
@@ -50,17 +78,31 @@ export function Articles() {
       ],
       render: (value) => t(`articles.groups.${value}`),
     },
+    // Combined group/subgroup column (shown only on medium, hidden on small)
+    {
+      key: 'subgroup',
+      header: t('articles.columns.group'),
+      className: styles.showOnMedium,
+      render: (_, row) => (
+        <div className={styles.combinedGroupCell}>
+          <span className={styles.groupLine}>{t(`articles.groups.${row.group}`)}</span>
+          <span className={styles.subgroupLine}>{t(`articles.subgroups.${row.subgroup}`)}</span>
+        </div>
+      ),
+    },
+    // Regular subgroup column (hidden on medium and smaller)
     {
       key: 'subgroup',
       header: t('articles.columns.subgroup'),
       sortable: true,
+      className: styles.hideOnMedium,
       render: (value) => t(`articles.subgroups.${value}`),
     },
     {
       key: 'packaging',
       header: t('articles.columns.packaging'),
       sortable: true,
-      className: styles.hideOnMobile,
+      className: styles.hideOnLarge,
     },
     {
       key: 'unit',
@@ -71,7 +113,7 @@ export function Articles() {
         { value: 'st', label: t('articles.units.piece') },
         { value: 'kg', label: t('articles.units.kg') },
       ],
-      className: styles.hideOnMobile,
+      className: styles.hideOnLarge,
       render: (value) => (
         <span className={styles.unitBadge}>
           {value === 'st' ? t('articles.units.piece') : t('articles.units.kg')}
@@ -82,13 +124,15 @@ export function Articles() {
       key: 'brand',
       header: t('articles.columns.brand'),
       sortable: true,
-      className: styles.hideOnMobile,
+      className: styles.hideOnLarge,
     },
+    // Regular blocked column (hidden on small)
     {
       key: 'blocked',
       header: t('articles.columns.blocked'),
       sortable: true,
       filterable: true,
+      className: styles.hideOnSmall,
       filterOptions: [
         { value: 'true', label: t('common.yes') },
         { value: 'false', label: t('common.no') },

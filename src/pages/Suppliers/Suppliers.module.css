@@ -200,12 +200,7 @@
 }
 
 /* Responsive */
-@media (max-width: 1024px) {
-  .table {
-    display: block;
-    overflow-x: auto;
-  }
-
+@media (max-width: 1400px) {
   .hideOnMobile {
     display: none;
   }
