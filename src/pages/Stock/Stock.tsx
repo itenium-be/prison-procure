@@ -130,6 +130,15 @@ export function Stock() {
             </div>
           </div>
 
+          <div className={styles.stockForecast}>
+            <h3>{t('stock.timeline.forecast')}</h3>
+            <p className={styles.forecastText}>
+              {selectedArticle.currentStock < selectedArticle.minStock
+                ? t('stock.timeline.forecastLow')
+                : t('stock.timeline.forecastOk', { days: Math.floor(selectedArticle.currentStock / 5) })}
+            </p>
+          </div>
+
           <div className={styles.movementsTable}>
             <table>
               <thead>
@@ -172,15 +181,6 @@ export function Stock() {
                   ))}
               </tbody>
             </table>
-          </div>
-
-          <div className={styles.stockForecast}>
-            <h3>{t('stock.timeline.forecast')}</h3>
-            <p className={styles.forecastText}>
-              {selectedArticle.currentStock < selectedArticle.minStock
-                ? t('stock.timeline.forecastLow')
-                : t('stock.timeline.forecastOk', { days: Math.floor(selectedArticle.currentStock / 5) })}
-            </p>
           </div>
         </>
       ) : (
