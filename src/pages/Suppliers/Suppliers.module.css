@@ -199,9 +199,15 @@
   color: var(--warning-color);
 }
 
-/* Responsive */
-@media (max-width: 1400px) {
-  .hideOnMobile {
+/* Responsive - account for 260px sidebar */
+@media (max-width: 1500px) {
+  .hideOnLarge {
+    display: none;
+  }
+}
+
+@media (max-width: 1280px) {
+  .hideOnMedium {
     display: none;
   }
 }

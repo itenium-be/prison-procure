@@ -161,23 +161,23 @@
   color: var(--text-secondary);
 }
 
-/* Responsive visibility classes */
+/* Responsive visibility classes - account for 260px sidebar */
 .showOnSmall,
 .showOnMedium {
   display: none;
 }
 
-/* XL: > 1200px - show everything */
+/* XL: > 1500px - show everything */
 
-/* LG: 992px - 1200px - hide packaging, unit, brand */
-@media (max-width: 1200px) {
+/* LG: < 1500px - hide packaging, unit, brand */
+@media (max-width: 1500px) {
   .hideOnLarge {
     display: none;
   }
 }
 
-/* MD: 768px - 992px - also hide separate group, show combined group/subgroup */
-@media (max-width: 992px) {
+/* MD: < 1280px - also hide separate group, show combined group/subgroup */
+@media (max-width: 1280px) {
   .hideOnMedium {
     display: none;
   }
