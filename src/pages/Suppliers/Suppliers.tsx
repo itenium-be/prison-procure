@@ -87,8 +87,8 @@ export function Suppliers() {
             <tr>
               <th>{t('suppliers.fields.code')}</th>
               <th>{t('suppliers.fields.name')}</th>
-              <th className={styles.hideOnMobile}>{t('suppliers.fields.email')}</th>
-              <th className={styles.hideOnMobile}>{t('suppliers.fields.phone')}</th>
+              <th className={styles.hideOnLarge}>{t('suppliers.fields.email')}</th>
+              <th className={styles.hideOnMedium}>{t('suppliers.fields.phone')}</th>
               <th>{t('suppliers.status')}</th>
               <th>{t('suppliers.actions')}</th>
             </tr>
@@ -105,8 +105,8 @@ export function Suppliers() {
                   </button>
                 </td>
                 <td>{supplier.name}</td>
-                <td className={styles.hideOnMobile}><a href={`mailto:${supplier.email}`} className={styles.link}>{supplier.email}</a></td>
-                <td className={styles.hideOnMobile}><a href={`tel:${supplier.phone}`} className={styles.link}>{supplier.phone}</a></td>
+                <td className={styles.hideOnLarge}><a href={`mailto:${supplier.email}`} className={styles.link}>{supplier.email}</a></td>
+                <td className={styles.hideOnMedium}><a href={`tel:${supplier.phone}`} className={styles.link}>{supplier.phone}</a></td>
                 <td>
                   <div className={styles.statusBadges}>
                     {supplier.blocked && (
