@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useNavigate, useParams } from 'react-router-dom'
-import { ArrowLeft, Building2, MapPin, Users } from 'lucide-react'
+import { ArrowLeft, Building2, MapPin, Users, Phone, Mail } from 'lucide-react'
 import styles from './PrisonDetail.module.css'
 
 type TabType = 'general' | 'location' | 'capacity'
@@ -220,24 +220,38 @@ export function PrisonDetail() {
 
               <div className={styles.fieldGroup}>
                 <label className={styles.label}>{t('adminPrisons.fields.phone')}</label>
-                <input
-                  type="tel"
-                  className={styles.input}
-                  value={formData.phone}
-                  onChange={e => handleChange('phone', e.target.value)}
-                  placeholder={t('adminPrisons.fields.phonePlaceholder')}
-                />
+                <div className={styles.inputWithIcon}>
+                  <input
+                    type="tel"
+                    className={styles.input}
+                    value={formData.phone}
+                    onChange={e => handleChange('phone', e.target.value)}
+                    placeholder={t('adminPrisons.fields.phonePlaceholder')}
+                  />
+                  {formData.phone && (
+                    <a href={`tel:${formData.phone}`} className={styles.iconButton} title={t('adminPrisons.fields.callPhone')}>
+                      <Phone size={18} />
+                    </a>
+                  )}
+                </div>
               </div>
 
               <div className={styles.fieldGroup}>
                 <label className={styles.label}>{t('adminPrisons.fields.email')}</label>
-                <input
-                  type="email"
-                  className={styles.input}
-                  value={formData.email}
-                  onChange={e => handleChange('email', e.target.value)}
-                  placeholder={t('adminPrisons.fields.emailPlaceholder')}
-                />
+                <div className={styles.inputWithIcon}>
+                  <input
+                    type="email"
+                    className={styles.input}
+                    value={formData.email}
+                    onChange={e => handleChange('email', e.target.value)}
+                    placeholder={t('adminPrisons.fields.emailPlaceholder')}
+                  />
+                  {formData.email && (
+                    <a href={`mailto:${formData.email}`} className={styles.iconButton} title={t('adminPrisons.fields.sendEmail')}>
+                      <Mail size={18} />
+                    </a>
+                  )}
+                </div>
               </div>
 
               <div className={styles.fieldGroup}>
@@ -346,24 +360,38 @@ export function PrisonDetail() {
 
               <div className={styles.fieldGroup}>
                 <label className={styles.label}>{t('adminPrisons.fields.directorPhone')}</label>
-                <input
-                  type="tel"
-                  className={styles.input}
-                  value={formData.directorPhone}
-                  onChange={e => handleChange('directorPhone', e.target.value)}
-                  placeholder={t('adminPrisons.fields.phonePlaceholder')}
-                />
+                <div className={styles.inputWithIcon}>
+                  <input
+                    type="tel"
+                    className={styles.input}
+                    value={formData.directorPhone}
+                    onChange={e => handleChange('directorPhone', e.target.value)}
+                    placeholder={t('adminPrisons.fields.phonePlaceholder')}
+                  />
+                  {formData.directorPhone && (
+                    <a href={`tel:${formData.directorPhone}`} className={styles.iconButton} title={t('adminPrisons.fields.callPhone')}>
+                      <Phone size={18} />
+                    </a>
+                  )}
+                </div>
               </div>
 
               <div className={styles.fieldGroup}>
                 <label className={styles.label}>{t('adminPrisons.fields.directorEmail')}</label>
-                <input
-                  type="email"
-                  className={styles.input}
-                  value={formData.directorEmail}
-                  onChange={e => handleChange('directorEmail', e.target.value)}
-                  placeholder={t('adminPrisons.fields.emailPlaceholder')}
-                />
+                <div className={styles.inputWithIcon}>
+                  <input
+                    type="email"
+                    className={styles.input}
+                    value={formData.directorEmail}
+                    onChange={e => handleChange('directorEmail', e.target.value)}
+                    placeholder={t('adminPrisons.fields.emailPlaceholder')}
+                  />
+                  {formData.directorEmail && (
+                    <a href={`mailto:${formData.directorEmail}`} className={styles.iconButton} title={t('adminPrisons.fields.sendEmail')}>
+                      <Mail size={18} />
+                    </a>
+                  )}
+                </div>
               </div>
             </div>
           )}

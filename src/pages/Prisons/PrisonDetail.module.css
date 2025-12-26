@@ -132,6 +132,37 @@
   box-shadow: 0 0 0 3px rgba(30, 58, 95, 0.1);
 }
 
+.inputWithIcon {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.inputWithIcon .input {
+  flex: 1;
+}
+
+.iconButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  background-color: transparent;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.iconButton:hover {
+  background-color: var(--background-color);
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
 .input::placeholder,
 .textarea::placeholder {
   color: var(--text-secondary);
