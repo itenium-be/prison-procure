@@ -122,12 +122,72 @@
   color: var(--text-primary);
 }
 
+/* Combined cell styles */
+.combinedCell {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.combinedDescription {
+  color: var(--text-secondary);
+  font-size: 0.8125rem;
+}
+
+.combinedBadge {
+  display: inline-flex;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.combinedGroupCell {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.groupLine {
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.subgroupLine {
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+}
+
+/* Responsive visibility classes */
+.showOnSmall,
+.showOnMedium {
+  display: none;
+}
+
+/* XL: > 1200px - show everything */
+
+/* LG: 992px - 1200px - hide packaging, unit, brand */
 @media (max-width: 1200px) {
-  .hideOnMobile {
+  .hideOnLarge {
     display: none;
   }
 }
 
+/* MD: 768px - 992px - also hide separate group, show combined group/subgroup */
+@media (max-width: 992px) {
+  .hideOnMedium {
+    display: none;
+  }
+
+  .showOnMedium {
+    display: table-cell;
+  }
+}
+
+/* SM: < 768px - show combined code/desc/blocked, hide separate columns */
 @media (max-width: 768px) {
   .page {
     padding: 16px;
@@ -141,5 +201,13 @@
   .addButton {
     width: 100%;
     justify-content: center;
+  }
+
+  .hideOnSmall {
+    display: none;
+  }
+
+  .showOnSmall {
+    display: table-cell;
   }
 }
